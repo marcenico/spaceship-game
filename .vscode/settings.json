@@ -1,4 +1,6 @@
 ﻿{
+  "csharpfixformat.style.spaces.beforeParenthesis": false,
+  "csharp.referencesCodeLens.enabled": true,
   "files.exclude": {
     "**/.DS_Store": true,
     "**/.git": true,
