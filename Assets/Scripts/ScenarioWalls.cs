@@ -10,6 +10,11 @@ public class ScenarioWalls : MonoBehaviour {
   private GameObject wallTop;
   [SerializeField]
   private GameObject wallBottom;
+  private Camera cameraMain;
+
+  private void Awake() {
+    cameraMain = Camera.main;
+  }
 
   void Update() {
     SetWallsPositions();
@@ -17,15 +22,15 @@ public class ScenarioWalls : MonoBehaviour {
   }
 
   void SetWallsPositions() {
-    wallLeft.transform.position = Camera.main.ViewportToWorldPoint(new Vector2(0f, 0.5f));
-    wallRight.transform.position = Camera.main.ViewportToWorldPoint(new Vector2(1f, 0.5f));
-    wallTop.transform.position = Camera.main.ViewportToWorldPoint(new Vector2(0.5f, 1f));
-    wallBottom.transform.position = Camera.main.ViewportToWorldPoint(new Vector2(0.5f, 0f));
+    wallLeft.transform.position = cameraMain.ViewportToWorldPoint(new Vector2(0f, 0.5f));
+    wallRight.transform.position = cameraMain.ViewportToWorldPoint(new Vector2(1f, 0.5f));
+    wallTop.transform.position = cameraMain.ViewportToWorldPoint(new Vector2(0.5f, 1f));
+    wallBottom.transform.position = cameraMain.ViewportToWorldPoint(new Vector2(0.5f, 0f));
   }
 
   void ScaleWalls() {
-    double width = Camera.main.orthographicSize * 2.0 * Screen.width / Screen.height;
-    double height = Camera.main.orthographicSize * 2.0;
+    double width = cameraMain.orthographicSize * 2.0 * Screen.width / Screen.height;
+    double height = cameraMain.orthographicSize * 2.0;
     wallBottom.transform.localScale = new Vector3(0.1f, (float) width, 0.1f);
     wallTop.transform.localScale = new Vector3(0.1f, (float) width, 0.1f);
     wallLeft.transform.localScale = new Vector3(0.1f, (float) height, 0.1f);
