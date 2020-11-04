@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class EnemyShoot : MonoBehaviour, IShoot {
+public class EnemyShoot : MonoBehaviour, IShootable {
   public GameObject projectile;
   public float nextFire = 1f;
   private float currentTime = 0f;

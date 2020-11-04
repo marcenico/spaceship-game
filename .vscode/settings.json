@@ -1,6 +1,7 @@
 ﻿{
   "csharpfixformat.style.spaces.beforeParenthesis": false,
-  "csharp.referencesCodeLens.enabled": true,
+  "csharp.referencesCodeLens.enabled": false,
+  "editor.tabSize": 2,
   "files.exclude": {
     "**/.DS_Store": true,
     "**/.git": true,
@@ -55,6 +56,7 @@
     "Assets/Resources": true,
     "Assets/Scenes": true,
     "Builds": true,
-    "Assets/Prefabs": true
+    "Assets/Prefabs": true,
+    "Assets/Textures": true
   }
 }
