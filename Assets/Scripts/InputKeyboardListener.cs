@@ -1,6 +1,7 @@
 using UnityEngine;
 
 public class InputKeyboardListener : MonoBehaviour, IInputable {
+  private Vector3 direction = Vector3.zero;
 
   public void GetDirection(Vector3 direction) {
     InputProvider.TriggerOnHasMove(direction);
@@ -10,8 +11,11 @@ public class InputKeyboardListener : MonoBehaviour, IInputable {
     InputProvider.TriggerOnHasShoot();
   }
 
+  private void FixedUpdate() {
+    GetDirection(Vector3Extension.SetPos(direction, Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0.0f));
+  }
+
   private void Update() {
-    GetDirection(new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")));
     if (Input.GetButtonDown("Fire1")) ShootPressed();
   }
 }
