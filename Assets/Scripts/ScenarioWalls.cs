@@ -1,10 +1,10 @@
 ﻿using UnityEngine;
 
 public class ScenarioWalls : MonoBehaviour {
-  [SerializeField] private GameObject wallLeft;
-  [SerializeField] private GameObject wallRight;
-  [SerializeField] private GameObject wallTop;
-  [SerializeField] private GameObject wallBottom;
+  [SerializeField] private GameObject wallLeft = null;
+  [SerializeField] private GameObject wallRight = null;
+  [SerializeField] private GameObject wallTop = null;
+  [SerializeField] private GameObject wallBottom = null;
   private Camera cameraMain;
 
   private void Awake() {
