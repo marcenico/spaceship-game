@@ -13,7 +13,8 @@ GameObject:
   - component: {fileID: 5478061218403112423}
   - component: {fileID: 5478061218403112422}
   - component: {fileID: 6812992328244188416}
-  - component: {fileID: 3259879706004960471}
+  - component: {fileID: 2030439222307168814}
+  - component: {fileID: 4688717051462005424}
   m_Layer: 8
   m_Name: PlayerProjectile
   m_TagString: Untagged
@@ -121,7 +122,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5478061218403112425}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -134,7 +135,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 5
---- !u!114 &3259879706004960471
+--- !u!114 &2030439222307168814
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -146,5 +147,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d437d1b6403ca743a14836e6e2a5510, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 20
-  isPlayerTarget: 0
+--- !u!114 &4688717051462005424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5478061218403112425}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d38f3aa56e144d48bb8177a56cdcdad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
+  direction: {x: 0, y: 1, z: 0}
+  rigidBody: {fileID: 0}

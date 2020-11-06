@@ -91,7 +91,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1750342473}
   - component: {fileID: 1750342477}
-  - component: {fileID: 1587515920}
+  - component: {fileID: 6376246365769082155}
   m_Layer: 0
   m_Name: WallTop
   m_TagString: Wall
@@ -121,7 +121,7 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1750342472}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!61 &1587515920
+--- !u!61 &6376246365769082155
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -131,7 +131,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -157,7 +157,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1767239819}
   - component: {fileID: 1767239823}
-  - component: {fileID: 589394974}
+  - component: {fileID: 43963946824726824}
   m_Layer: 0
   m_Name: WallBottom
   m_TagString: Wall
@@ -187,7 +187,7 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1767239818}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!61 &589394974
+--- !u!61 &43963946824726824
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -197,7 +197,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -328,7 +328,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 10
+      scalar: 6
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -813,7 +813,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     randomizeRotationDirection: 0
-    maxNumParticles: 100
+    maxNumParticles: 200
     size3D: 0
     rotation3D: 0
     gravityModifier:
@@ -1516,12 +1516,12 @@ ParticleSystem:
       maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 1, g: 1, b: 1, a: 1}
-        key1: {r: 1, g: 1, b: 1, a: 0.4392157}
-        key2: {r: 0, g: 0, b: 0, a: 0.8392157}
-        key3: {r: 0, g: 0, b: 0, a: 0}
-        key4: {r: 0, g: 0, b: 0, a: 1}
-        key5: {r: 0, g: 0, b: 0, a: 0.34509805}
+        key0: {r: 1, g: 1, b: 1, a: 0.9019608}
+        key1: {r: 1, g: 1, b: 1, a: 0.46666667}
+        key2: {r: 0, g: 0, b: 0, a: 1}
+        key3: {r: 0, g: 0, b: 0, a: 0.30980393}
+        key4: {r: 0, g: 0, b: 0, a: 0.67058825}
+        key5: {r: 0, g: 0, b: 0, a: 0.85}
         key6: {r: 0, g: 0, b: 0, a: 1}
         key7: {r: 0, g: 0, b: 0, a: 1}
         ctime0: 0
@@ -1533,16 +1533,16 @@ ParticleSystem:
         ctime6: 0
         ctime7: 0
         atime0: 0
-        atime1: 11180
-        atime2: 19661
-        atime3: 32768
-        atime4: 36623
-        atime5: 44140
-        atime6: 52814
+        atime1: 31418
+        atime2: 32382
+        atime3: 33539
+        atime4: 43947
+        atime5: 55705
+        atime6: 65535
         atime7: 65535
         m_Mode: 0
         m_NumColorKeys: 2
-        m_NumAlphaKeys: 8
+        m_NumAlphaKeys: 7
       minGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -6270,12 +6270,12 @@ ParticleSystem:
       maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 1, g: 1, b: 1, a: 1}
-        key1: {r: 1, g: 1, b: 1, a: 0.4392157}
-        key2: {r: 0, g: 0, b: 0, a: 0.8392157}
-        key3: {r: 0, g: 0, b: 0, a: 0}
-        key4: {r: 0, g: 0, b: 0, a: 1}
-        key5: {r: 0, g: 0, b: 0, a: 0.34509805}
+        key0: {r: 1, g: 1, b: 1, a: 0.9019608}
+        key1: {r: 1, g: 1, b: 1, a: 0.46666667}
+        key2: {r: 0, g: 0, b: 0, a: 1}
+        key3: {r: 0, g: 0, b: 0, a: 0.30980393}
+        key4: {r: 0, g: 0, b: 0, a: 0.67058825}
+        key5: {r: 0, g: 0, b: 0, a: 0.85}
         key6: {r: 0, g: 0, b: 0, a: 1}
         key7: {r: 0, g: 0, b: 0, a: 1}
         ctime0: 0
@@ -6287,16 +6287,16 @@ ParticleSystem:
         ctime6: 0
         ctime7: 0
         atime0: 0
-        atime1: 11180
-        atime2: 19661
-        atime3: 32768
-        atime4: 36623
-        atime5: 44140
-        atime6: 52814
+        atime1: 31418
+        atime2: 32382
+        atime3: 33539
+        atime4: 43947
+        atime5: 55705
+        atime6: 65535
         atime7: 65535
         m_Mode: 0
         m_NumColorKeys: 2
-        m_NumAlphaKeys: 8
+        m_NumAlphaKeys: 7
       minGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -9765,7 +9765,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3327499864533269418}
   - component: {fileID: 980728538}
-  - component: {fileID: 1752479472}
+  - component: {fileID: 923120469430961636}
   m_Layer: 0
   m_Name: WallRight
   m_TagString: Wall
@@ -9795,7 +9795,7 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3327499864533269417}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!61 &1752479472
+--- !u!61 &923120469430961636
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9805,7 +9805,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -9895,7 +9895,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3327499865562122847}
   - component: {fileID: 7292470185444679456}
-  - component: {fileID: 145176143}
+  - component: {fileID: 2178330021008581367}
   m_Layer: 0
   m_Name: WallLeft
   m_TagString: Wall
@@ -9925,7 +9925,7 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3327499865562122846}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!61 &145176143
+--- !u!61 &2178330021008581367
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9935,7 +9935,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}

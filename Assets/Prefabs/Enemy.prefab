@@ -105,6 +105,7 @@ GameObject:
   - component: {fileID: 6052892192705499102}
   - component: {fileID: 5859769134723271741}
   - component: {fileID: 8881532307654342858}
+  - component: {fileID: 954201078}
   m_Layer: 10
   m_Name: Enemy
   m_TagString: Enemy
@@ -209,7 +210,7 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -241,4 +242,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a5451df31008fc49a22f3a4ff9054f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 8
+--- !u!114 &954201078
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6554150793891237155}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d38f3aa56e144d48bb8177a56cdcdad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 4
+  direction: {x: 0, y: 0, z: 0}
+  rigidBody: {fileID: 0}

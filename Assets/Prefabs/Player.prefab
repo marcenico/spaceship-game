@@ -128,7 +128,7 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -170,7 +170,6 @@ MonoBehaviour:
   spawnProjectilesPoints:
   - {fileID: 778030118}
   - {fileID: 630892525}
-  movementController: {fileID: 1450232316}
   boundary:
     xMinimum: -17.15
     xMaximum: 17.15
@@ -189,6 +188,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
+  direction: {x: 0, y: 0, z: 0}
   rigidBody: {fileID: 0}
 --- !u!1 &3686968506248864880
 GameObject:
