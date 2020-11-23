@@ -16,6 +16,6 @@ public class InputKeyboardListener : MonoBehaviour, IInputable {
   }
 
   private void Update() {
-    if (Input.GetButtonDown("Fire1")) ShootPressed();
+    if (Input.GetButton("Fire1")) ShootPressed();
   }
 }

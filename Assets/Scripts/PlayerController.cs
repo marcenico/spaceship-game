@@ -6,14 +6,15 @@ public class Boundary {
 }
 
 [RequireComponent(typeof(MovementController))]
+[RequireComponent(typeof(ShootController))]
 public class PlayerController : MonoBehaviour {
-  public GameObject projectile;
-  public Transform[] spawnProjectilesPoints;
   public Boundary boundary;
-  private MovementController movementController;
+  private MovementController movementController = null;
+  private ShootController shootController = null;
 
   private void Start() {
     movementController = GetComponent<MovementController>();
+    shootController = GetComponent<ShootController>();
     InputProvider.OnHasMove += OnHasMove;
     InputProvider.OnHasShoot += OnHasShoot;
   }
@@ -24,9 +25,7 @@ public class PlayerController : MonoBehaviour {
   }
 
   private void OnHasShoot() {
-    foreach (var spawnPoint in spawnProjectilesPoints) {
-      Instantiate(projectile, spawnPoint.position, Quaternion.identity);
-    }
+    StartCoroutine(shootController.Shoot());
   }
 
   private void Update() {

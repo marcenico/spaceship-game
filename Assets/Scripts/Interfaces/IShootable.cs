@@ -1,3 +1,5 @@
+using System.Collections;
+
 public interface IShootable {
-  void Shoot();
+  IEnumerator Shoot();
 }

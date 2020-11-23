@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6052892192964285467}
-  - component: {fileID: 6148965357046325052}
   m_Layer: 10
   m_Name: ShootCanon2
   m_TagString: Untagged
@@ -31,21 +30,6 @@ Transform:
   m_Father: {fileID: 6554150793891237154}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6148965357046325052
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6052892192964285466}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b0fa6718e0beff4aa2112fce342d29b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  projectile: {fileID: 893696515293339645, guid: 8c3aa22455d33ca41850ee80eb6274c7,
-    type: 3}
-  nextFire: 1
 --- !u!1 &6052892193119174611
 GameObject:
   m_ObjectHideFlags: 0
@@ -55,7 +39,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6052892193119174608}
-  - component: {fileID: 6148965357150844147}
   m_Layer: 10
   m_Name: ShootCanon
   m_TagString: Untagged
@@ -77,21 +60,6 @@ Transform:
   m_Father: {fileID: 6554150793891237154}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6148965357150844147
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6052892193119174611}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b0fa6718e0beff4aa2112fce342d29b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  projectile: {fileID: 893696515293339645, guid: 8c3aa22455d33ca41850ee80eb6274c7,
-    type: 3}
-  nextFire: 1
 --- !u!1 &6554150793891237155
 GameObject:
   m_ObjectHideFlags: 0
@@ -106,6 +74,7 @@ GameObject:
   - component: {fileID: 8881532307654342858}
   - component: {fileID: 954201078}
   - component: {fileID: 2121946116}
+  - component: {fileID: 8696252227224339798}
   m_Layer: 10
   m_Name: Enemy
   m_TagString: Enemy
@@ -206,7 +175,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
-  direction: {x: 0, y: -1, z: 0}
+  direction: {x: -0.5, y: -1, z: 0}
   rigidBody: {fileID: 0}
 --- !u!114 &2121946116
 MonoBehaviour:
@@ -232,8 +201,26 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 1
+          m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &8696252227224339798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6554150793891237155}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 359344f5f70836b409c2b8f0a53db761, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnProjectilesPoints:
+  - {fileID: 6052892193119174608}
+  - {fileID: 6052892192964285467}
+  projectile: {fileID: 893696515293339645, guid: 8c3aa22455d33ca41850ee80eb6274c7,
+    type: 3}
+  nextFire: 0.75
 --- !u!1 &7943667919445371117
 GameObject:
   m_ObjectHideFlags: 0
