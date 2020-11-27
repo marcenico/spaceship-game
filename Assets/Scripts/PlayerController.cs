@@ -8,7 +8,7 @@ public class Boundary {
 [RequireComponent(typeof(MovementController))]
 [RequireComponent(typeof(ShootController))]
 public class PlayerController : MonoBehaviour {
-  public Boundary boundary;
+  [SerializeField] private Boundary boundary = null;
   private MovementController movementController = null;
   private ShootController shootController = null;
 
@@ -20,11 +20,13 @@ public class PlayerController : MonoBehaviour {
   }
 
   private void OnHasMove(Vector3 direction) {
+    if (!movementController) return;
     movementController.direction = direction;
     movementController.DoMovement();
   }
 
   private void OnHasShoot() {
+    if (!shootController) return;
     StartCoroutine(shootController.Shoot());
   }
 

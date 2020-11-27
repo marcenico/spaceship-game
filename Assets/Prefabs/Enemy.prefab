@@ -73,8 +73,10 @@ GameObject:
   - component: {fileID: 5859769134723271741}
   - component: {fileID: 8881532307654342858}
   - component: {fileID: 954201078}
-  - component: {fileID: 2121946116}
   - component: {fileID: 8696252227224339798}
+  - component: {fileID: 2121946116}
+  - component: {fileID: 2543923643089601275}
+  - component: {fileID: 8686903916997214143}
   m_Layer: 10
   m_Name: Enemy
   m_TagString: Enemy
@@ -177,32 +179,6 @@ MonoBehaviour:
   speed: 2
   direction: {x: -0.5, y: -1, z: 0}
   rigidBody: {fileID: 0}
---- !u!114 &2121946116
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6554150793891237155}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 222a3803494db3449b7e4261672ab129, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  action:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 6554150793891237155}
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &8696252227224339798
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -221,6 +197,68 @@ MonoBehaviour:
   projectile: {fileID: 893696515293339645, guid: 8c3aa22455d33ca41850ee80eb6274c7,
     type: 3}
   nextFire: 0.75
+--- !u!114 &2121946116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6554150793891237155}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 222a3803494db3449b7e4261672ab129, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  action:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2543923643089601275}
+        m_MethodName: DoDestroy
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 8686903916997214143}
+        m_MethodName: DoInstanciate
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &2543923643089601275
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6554150793891237155}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed3a3cb66332a0143958a86eef23474f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8686903916997214143
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6554150793891237155}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af1dcaa899b63f04ca98a6d33a0ca6a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 2334845325807041021, guid: ad4888cd09049fa4c84e37ebcb8ef05f, type: 3}
 --- !u!1 &7943667919445371117
 GameObject:
   m_ObjectHideFlags: 0
