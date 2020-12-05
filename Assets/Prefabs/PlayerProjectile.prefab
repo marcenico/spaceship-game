@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 4688717051462005424}
   - component: {fileID: 5796164191895440657}
   - component: {fileID: 4931173024760928660}
-  - component: {fileID: 4738918124707351116}
+  - component: {fileID: 1751120318880960000}
   m_Layer: 8
   m_Name: PlayerProjectile
   m_TagString: Untagged
@@ -191,7 +191,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 4738918124707351116}
+      - m_Target: {fileID: 1751120318880960000}
         m_MethodName: DoInstanciate
         m_Mode: 1
         m_Arguments:
@@ -214,7 +214,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed3a3cb66332a0143958a86eef23474f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &4738918124707351116
+--- !u!114 &1751120318880960000
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -226,4 +226,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af1dcaa899b63f04ca98a6d33a0ca6a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab: {fileID: 1082374810154706924, guid: c86e8b229b6bb19498338f0f05908b0f, type: 3}
+  prefab: {fileID: 1147558597619388663, guid: 74912972e9a1ec14d9258236281f97a8, type: 3}
