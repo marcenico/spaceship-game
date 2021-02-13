@@ -6,7 +6,6 @@ public class ScenarioWalls : MonoBehaviour {
   [SerializeField] private GameObject wallTop = null;
   [SerializeField] private GameObject wallBottom = null;
   private Camera cameraMain;
-  private GameObject objectThatCollided = null;
 
   private void Awake() {
     cameraMain = Camera.main;
@@ -31,18 +30,5 @@ public class ScenarioWalls : MonoBehaviour {
     wallTop.transform.localScale = new Vector3(0.1f, (float)width, 0.1f);
     wallLeft.transform.localScale = new Vector3(0.1f, (float)height, 0.1f);
     wallRight.transform.localScale = new Vector3(0.1f, (float)height, 0.1f);
-  }
-
-  public void DestroyObjectThatCollided() {
-    if (objectThatCollided == null) return;
-    switch (objectThatCollided.tag) {
-      case "Player":
-        break;
-      case "Enemy":
-        break;
-      default:
-        Destroy(objectThatCollided);
-        break;
-    }
   }
 }

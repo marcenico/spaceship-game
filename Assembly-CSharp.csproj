@@ -62,6 +62,7 @@
      <Compile Include="Assets\Scripts\ProjectileBehaviour.cs" />
      <Compile Include="Assets\Scripts\ScenarioWalls.cs" />
      <Compile Include="Assets\Scripts\ShootController.cs" />
+     <Compile Include="Assets\Scripts\Utils\DestroyInvisible.cs" />
      <Compile Include="Assets\Scripts\Utils\Optional.cs" />
      <None Include="Assets\Resources\JMO Assets\Cartoon FX\Shaders\CFX3 Multiply Color.shader" />
      <None Include="Assets\Resources\JMO Assets\Cartoon FX\CartoonFX Free.txt" />
