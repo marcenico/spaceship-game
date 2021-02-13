@@ -6,7 +6,7 @@ public class ScenarioWalls : MonoBehaviour {
   [SerializeField] private GameObject wallTop = null;
   [SerializeField] private GameObject wallBottom = null;
   private Camera cameraMain;
-  private GameObject objectThatCollided;
+  private GameObject objectThatCollided = null;
 
   private void Awake() {
     cameraMain = Camera.main;

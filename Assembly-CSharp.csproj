@@ -610,9 +610,6 @@
     <Reference Include="Unity.2D.Animation.Runtime">
         <HintPath>D:/Unity Projects/SpaceShip Game/Library/ScriptAssemblies/Unity.2D.Animation.Runtime.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.2D.PixelPerfect.Editor">
-        <HintPath>D:/Unity Projects/SpaceShip Game/Library/ScriptAssemblies/Unity.2D.PixelPerfect.Editor.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.VSCode.Editor">
         <HintPath>D:/Unity Projects/SpaceShip Game/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
@@ -664,9 +661,6 @@
     <Reference Include="Unity.2D.SpriteShape.Runtime">
         <HintPath>D:/Unity Projects/SpaceShip Game/Library/ScriptAssemblies/Unity.2D.SpriteShape.Runtime.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.2D.PixelPerfect">
-        <HintPath>D:/Unity Projects/SpaceShip Game/Library/ScriptAssemblies/Unity.2D.PixelPerfect.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.2D.Animation.Editor">
         <HintPath>D:/Unity Projects/SpaceShip Game/Library/ScriptAssemblies/Unity.2D.Animation.Editor.dll</HintPath>
     </Reference>
@@ -684,6 +678,12 @@
     </Reference>
     <Reference Include="UnityEditor.UI">
         <HintPath>D:/Unity Projects/SpaceShip Game/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.2D.PixelPerfect.Editor">
+        <HintPath>D:/Unity Projects/SpaceShip Game/Library/ScriptAssemblies/Unity.2D.PixelPerfect.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.2D.PixelPerfect">
+        <HintPath>D:/Unity Projects/SpaceShip Game/Library/ScriptAssemblies/Unity.2D.PixelPerfect.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
