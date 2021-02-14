@@ -1,14 +1,8 @@
 ﻿using UnityEngine;
 
-[System.Serializable]
-public class Boundary {
-  public float xMinimum, xMaximum, yMinimum, yMaximum;
-}
-
 [RequireComponent(typeof(MovementController))]
 [RequireComponent(typeof(ShootController))]
 public class PlayerController : MonoBehaviour {
-  [SerializeField] private Boundary boundary = null;
   private MovementController movementController = null;
   private ShootController shootController = null;
 
@@ -23,6 +17,7 @@ public class PlayerController : MonoBehaviour {
     if (!movementController) return;
     movementController.direction = direction;
     movementController.DoMovement();
+    SetPlayerBoudaries();
   }
 
   private void OnHasShoot() {
@@ -30,9 +25,10 @@ public class PlayerController : MonoBehaviour {
     StartCoroutine(shootController.Shoot());
   }
 
-  private void Update() {
-    float x = Mathf.Clamp(transform.position.x, boundary.xMinimum, boundary.xMaximum);
-    float y = Mathf.Clamp(transform.position.y, boundary.yMinimum, boundary.yMaximum);
+  private void SetPlayerBoudaries() {
+    BoundaryController boundary = GameManager.Instance.boundaryController;
+    float x = Mathf.Clamp(transform.position.x, boundary.left, boundary.right);
+    float y = Mathf.Clamp(transform.position.y, boundary.bottom, boundary.top);
     transform.position = new Vector3(x, y);
   }
 }
