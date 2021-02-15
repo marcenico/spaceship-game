@@ -9,7 +9,7 @@ public class Boundary {
 }
 
 public class BoundaryBehaviour : MonoBehaviour {
-  public Boundary boundary = new Boundary();
+  private Boundary boundary = new Boundary();
   public static BoundaryBehaviour Instance;
 
   private void Awake() {
@@ -30,9 +30,13 @@ public class BoundaryBehaviour : MonoBehaviour {
     boundary.bottom = lowerLeft.y + 1.4f;
   }
 
-  public Vector3 SetBoundaries(Vector3 position) {
+  public Vector3 GetClampPosition(Vector3 position) {
     float x = Mathf.Clamp(position.x, boundary.left, boundary.right);
     float y = Mathf.Clamp(position.y, boundary.bottom, boundary.top);
     return new Vector3(x, y);
+  }
+
+  private void OnDestroy() {
+    BoundaryProvider.OnGetBoundaries -= OnGetBoundaries;
   }
 }

@@ -16,7 +16,7 @@ public class PlayerController : MonoBehaviour {
 
   private void OnHasMove(Vector3 direction) {
     Assert.IsNotNull(movementController, message: $"No debe ser nulo {movementController}");
-    transform.position = BoundaryBehaviour.Instance.SetBoundaries(transform.position);
+    transform.position = BoundaryBehaviour.Instance.GetClampPosition(transform.position);
     movementController.direction = direction;
     movementController.DoMovement();
   }
@@ -24,5 +24,10 @@ public class PlayerController : MonoBehaviour {
   private void OnHasShoot() {
     Assert.IsNotNull(shootController, message: $"No debe ser nulo {shootController}");
     StartCoroutine(shootController.Shoot());
+  }
+
+  private void OnDestroy() {
+    InputProvider.OnHasMove -= OnHasMove;
+    InputProvider.OnHasShoot -= OnHasShoot;
   }
 }
