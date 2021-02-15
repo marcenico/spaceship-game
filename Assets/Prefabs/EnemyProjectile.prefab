@@ -241,7 +241,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fa25c657ea219c478d0ae1e5d0e4e0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeToDestroy: 0
+  waitingTime: 0.5
 --- !u!82 &7049737049554367054
 AudioSource:
   m_ObjectHideFlags: 0

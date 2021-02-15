@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.Assertions;
 
 [RequireComponent(typeof(MovementController))]
 [RequireComponent(typeof(ShootController))]
@@ -14,21 +15,14 @@ public class PlayerController : MonoBehaviour {
   }
 
   private void OnHasMove(Vector3 direction) {
-    if (!movementController) return;
+    Assert.IsNotNull(movementController, message: $"No debe ser nulo {movementController}");
+    transform.position = BoundaryBehaviour.Instance.SetBoundaries(transform.position);
     movementController.direction = direction;
     movementController.DoMovement();
-    SetPlayerBoudaries();
   }
 
   private void OnHasShoot() {
-    if (!shootController) return;
+    Assert.IsNotNull(shootController, message: $"No debe ser nulo {shootController}");
     StartCoroutine(shootController.Shoot());
-  }
-
-  private void SetPlayerBoudaries() {
-    BoundaryController boundary = GameManager.Instance.boundaryController;
-    float x = Mathf.Clamp(transform.position.x, boundary.left, boundary.right);
-    float y = Mathf.Clamp(transform.position.y, boundary.bottom, boundary.top);
-    transform.position = new Vector3(x, y);
   }
 }

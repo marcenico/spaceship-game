@@ -2,7 +2,7 @@
 
 [RequireComponent(typeof(MovementController))]
 public class ProjectileBehaviour : MonoBehaviour {
-  private MovementController movementController;
+  private MovementController movementController = null;
 
   void Start() {
     movementController = GetComponent<MovementController>();

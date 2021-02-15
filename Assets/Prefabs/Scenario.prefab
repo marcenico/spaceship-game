@@ -9598,7 +9598,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3327499865495934119}
-  - component: {fileID: 880463941}
+  - component: {fileID: 1326076576}
   m_Layer: 0
   m_Name: Scenario
   m_TagString: Untagged
@@ -9621,7 +9621,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &880463941
+--- !u!114 &1326076576
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9633,5 +9633,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27f6caf838d985e43a610e3a9b44bc13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scrollSpeed: 0.3
+  scrollSpeed: 0.5
   mesh: {fileID: 1701854911}

@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 5796164191895440657}
   - component: {fileID: 4931173024760928660}
   - component: {fileID: 1751120318880960000}
-  - component: {fileID: -8828514461445742735}
+  - component: {fileID: -5332869968104973721}
   - component: {fileID: 856825690171874533}
   m_Layer: 8
   m_Name: PlayerProjectile
@@ -229,7 +229,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 1147558597619388663, guid: 74912972e9a1ec14d9258236281f97a8, type: 3}
---- !u!114 &-8828514461445742735
+--- !u!114 &-5332869968104973721
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -241,7 +241,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fa25c657ea219c478d0ae1e5d0e4e0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeToDestroy: 0
+  waitingTime: 0.5
 --- !u!82 &856825690171874533
 AudioSource:
   m_ObjectHideFlags: 0
