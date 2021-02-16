@@ -3,7 +3,7 @@ using UnityEngine.Assertions;
 
 [RequireComponent(typeof(MovementController))]
 [RequireComponent(typeof(ShootController))]
-public class PlayerController : MonoBehaviour {
+public class PlayerBehaviour : MonoBehaviour {
   private MovementController movementController = null;
   private ShootController shootController = null;
 

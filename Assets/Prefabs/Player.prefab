@@ -169,11 +169,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff915c5461c586348a9fc6b6473138e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boundary:
-    xMinimum: -17.15
-    xMaximum: 17.15
-    yMinimum: -9
-    yMaximum: 9.25
 --- !u!114 &1450232316
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -11,4 +11,8 @@ public class ProjectileBehaviour : MonoBehaviour {
   void Update() {
     movementController.DoMovement();
   }
+
+  private void OnDisable() {
+    PoolSystem.Instance.ReturnOneToPool(gameObject);
+  }
 }

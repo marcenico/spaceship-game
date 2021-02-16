@@ -10,7 +10,7 @@ public class ShootController : MonoBehaviour, IShootable {
   public IEnumerator Shoot() {
     if (!canFire) yield break;
     foreach (var spawnPoint in spawnProjectilesPoints) {
-      Instantiate(projectile, spawnPoint.position, Quaternion.identity);
+      PoolSystem.Instance.GetOne(projectile.name).transform.position = spawnPoint.position;
     }
     canFire = false;
     yield return new WaitForSeconds(nextFire);
