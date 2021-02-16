@@ -30,4 +30,9 @@ public class PlayerBehaviour : MonoBehaviour {
     InputProvider.OnHasMove -= OnHasMove;
     InputProvider.OnHasShoot -= OnHasShoot;
   }
+
+  private void OnDisable() {
+    InputProvider.OnHasMove -= OnHasMove;
+    InputProvider.OnHasShoot -= OnHasShoot;
+  }
 }
