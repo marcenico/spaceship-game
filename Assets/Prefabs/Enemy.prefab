@@ -195,8 +195,7 @@ MonoBehaviour:
   spawnProjectilesPoints:
   - {fileID: 6052892193119174608}
   - {fileID: 6052892192964285467}
-  projectile: {fileID: 893696515293339645, guid: 8c3aa22455d33ca41850ee80eb6274c7,
-    type: 3}
+  prefab: {fileID: 893696515293339645, guid: 8c3aa22455d33ca41850ee80eb6274c7, type: 3}
   nextFire: 0.75
 --- !u!114 &2121946116
 MonoBehaviour:
@@ -247,6 +246,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed3a3cb66332a0143958a86eef23474f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onlyDeactivate: 1
 --- !u!114 &8358233546988296864
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -259,6 +259,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fa25c657ea219c478d0ae1e5d0e4e0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onlyDeactivate: 1
   waitingTime: 0
 --- !u!114 &8686903916997214143
 MonoBehaviour:
@@ -367,4 +368,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fa25c657ea219c478d0ae1e5d0e4e0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onlyDeactivate: 1
   waitingTime: 0

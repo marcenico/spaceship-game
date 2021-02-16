@@ -3,15 +3,14 @@ using System.Collections.Generic;
 
 [System.Serializable]
 public class Pool {
-  public string name = "";
-  public List<GameObject> gameObjects = new List<GameObject>();
+  public int initialSizeValue = 12;
+  public GameObject prefab = null;
+  [HideInInspector] public List<GameObject> gameObjects = new List<GameObject>();
 }
 
 public class PoolSystem : MonoBehaviour {
   public static PoolSystem Instance;
-  public List<GameObject> prefabs = new List<GameObject>();
   public List<Pool> pools = new List<Pool>();
-  private int initialValue = 6;
 
   private void Awake() {
     if (Instance != null) {
@@ -19,57 +18,37 @@ public class PoolSystem : MonoBehaviour {
       return;
     }
     Instance = this;
-    FillPool();
+    FillPools();
   }
 
-  private void FillPool() {
-    for (int i = 0; i < prefabs.Count; i++) {
-      Pool pool = new Pool();
-      for (int j = 0; j < initialValue; j++) {
-        GameObject go = Instantiate(prefabs[i], Vector3.zero, Quaternion.identity);
+  private void FillPools() {
+    foreach (Pool pool in pools) {
+      for (int i = 0; i < pool.initialSizeValue; i++) {
+        GameObject go = Instantiate(pool.prefab, Vector3.zero, Quaternion.identity);
+        go.name = pool.prefab.name;
         go.SetActive(false);
         pool.gameObjects.Add(go);
-        pool.name = go.name;
       }
-      pools.Add(pool);
     }
   }
 
   public GameObject GetOne(string prefabName) {
     GameObject go = null;
-    for (int i = 0; i < pools.Count; i++) {
-      if (pools[i].name.Contains(prefabName)) {
-        if (pools[i].gameObjects.Count > 0) {
-          go = pools[i].gameObjects[pools[i].gameObjects.Count - 1];
-          pools[i].gameObjects.RemoveAt(pools[i].gameObjects.Count - 1);
-          go.SetActive(true);
-          return go;
-        } else {
-          return InstanciateOne(prefabName);
-        }
-      }
+    Pool pool = pools.Find(x => x.prefab.name == prefabName);
+    if (pool.gameObjects.Count > 0) {
+      go = pool.gameObjects[pool.gameObjects.Count - 1];
+      pool.gameObjects.RemoveAt(pool.gameObjects.Count - 1);
+      return go;
+    } else {
+      go = Instantiate(pool.prefab, Vector3.zero, Quaternion.identity);
+      go.name = pool.prefab.name;
+      pool.gameObjects.Add(go);
+      return go;
     }
-    return go;
-  }
-
-  private GameObject InstanciateOne(string prefabName) {
-    GameObject go = null;
-    for (int i = 0; i < pools.Count; i++) {
-      if (pools[i].name.Contains(prefabName)) {
-        go = Instantiate(prefabs[i], Vector3.zero, Quaternion.identity);
-        go.SetActive(false);
-        pools[i].gameObjects.Add(go);
-      }
-    }
-    return go;
   }
 
   public void ReturnOneToPool(GameObject go) {
-    for (int i = 0; i < pools.Count; i++) {
-      if (pools[i].name.Contains(go.name)) {
-        pools[i].gameObjects.Add(go);
-        return;
-      }
-    }
+    Pool pool = pools.Find(x => x.prefab.name == go.name);
+    pool.gameObjects.Add(go);
   }
 }

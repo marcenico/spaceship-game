@@ -4,11 +4,11 @@
 public class ProjectileBehaviour : MonoBehaviour {
   private MovementController movementController = null;
 
-  void Start() {
+  private void Start() {
     movementController = GetComponent<MovementController>();
   }
 
-  void Update() {
+  private void Update() {
     movementController.DoMovement();
   }
 

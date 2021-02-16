@@ -174,7 +174,7 @@ GameObject:
   m_Component:
   - component: {fileID: 444881351}
   m_Layer: 0
-  m_Name: GameBehaviours
+  m_Name: Behaviours
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -373,10 +373,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74944a504e0cbc941aced31a88f2cc76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabs:
-  - {fileID: 5478061218403112425, guid: 38eedb1f0e6fd314c9bd3f81e2369a5a, type: 3}
-  - {fileID: 893696515293339645, guid: 8c3aa22455d33ca41850ee80eb6274c7, type: 3}
-  pools: []
+  pools:
+  - initialSizeValue: 12
+    prefab: {fileID: 893696515293339645, guid: 8c3aa22455d33ca41850ee80eb6274c7, type: 3}
+    gameObjects: []
+  - initialSizeValue: 12
+    prefab: {fileID: 5478061218403112425, guid: 38eedb1f0e6fd314c9bd3f81e2369a5a,
+      type: 3}
+    gameObjects: []
 --- !u!4 &1378252229
 Transform:
   m_ObjectHideFlags: 0
