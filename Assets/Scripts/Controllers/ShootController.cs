@@ -10,7 +10,7 @@ public class ShootController : MonoBehaviour, IShootable {
   public IEnumerator Shoot() {
     if (!canFire) yield break;
     foreach (var spawnPoint in spawnProjectilesPoints) {
-      GameObject poolPrefab = PoolSystem.Instance.GetOne(prefab.name);
+      GameObject poolPrefab = PoolController.Instance.GetOne(prefab.name);
       poolPrefab.transform.position = spawnPoint.position;
       poolPrefab.SetActive(true);
     }

@@ -8,8 +8,8 @@ public class Pool {
   [HideInInspector] public List<GameObject> gameObjects = new List<GameObject>();
 }
 
-public class PoolSystem : MonoBehaviour {
-  public static PoolSystem Instance;
+public class PoolController : MonoBehaviour {
+  public static PoolController Instance;
   public List<Pool> pools = new List<Pool>();
 
   private void Awake() {

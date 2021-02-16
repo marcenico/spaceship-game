@@ -13,6 +13,6 @@ public class ProjectileBehaviour : MonoBehaviour {
   }
 
   private void OnDisable() {
-    PoolSystem.Instance.ReturnOneToPool(gameObject);
+    PoolController.Instance.ReturnOneToPool(gameObject);
   }
 }
