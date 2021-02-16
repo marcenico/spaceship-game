@@ -11,6 +11,7 @@ public class AutoDestroyObject : MonoBehaviour {
 
   private IEnumerator CheckIfAlive() {
     yield return new WaitForSeconds(timeOfLive);
+    if (!gameObject.activeInHierarchy) yield break;
     if (onlyDeactivate) {
       this.gameObject.SetActive(false);
     } else
