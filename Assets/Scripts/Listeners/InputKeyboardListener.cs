@@ -8,14 +8,19 @@ public class InputKeyboardListener : MonoBehaviour, IInputable {
   }
 
   private void Update() {
-    if (Input.GetButton("Fire1")) ShootPressed();
+    if (Input.GetButton("Fire1")) Shoot();
+    if (Input.GetKey(KeyCode.E)) ShootFirstAbility();
   }
 
   public void GetDirection(Vector3 direction) {
     InputProvider.TriggerOnHasMove(direction);
   }
 
-  public void ShootPressed() {
+  public void Shoot() {
     InputProvider.TriggerOnHasShoot();
+  }
+
+  public void ShootFirstAbility() {
+    InputProvider.TriggerOnHasShootFirstAbility();
   }
 }

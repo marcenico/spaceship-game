@@ -12,6 +12,7 @@ public class PlayerBehaviour : MonoBehaviour {
     shootController = GetComponent<ShootController>();
     InputProvider.OnHasMove += OnHasMove;
     InputProvider.OnHasShoot += OnHasShoot;
+    InputProvider.OnHasShootFirstHability += OnHasShootFirstHability;
   }
 
   private void OnHasMove(Vector3 direction) {
@@ -26,13 +27,22 @@ public class PlayerBehaviour : MonoBehaviour {
     StartCoroutine(shootController.Shoot());
   }
 
+  private void OnHasShootFirstHability() {
+    Assert.IsNotNull(shootController, message: $"No debe ser nulo {shootController}");
+    StartCoroutine(shootController.ShootFirstAbility());
+  }
+
   private void OnDestroy() {
-    InputProvider.OnHasMove -= OnHasMove;
-    InputProvider.OnHasShoot -= OnHasShoot;
+    UnsuscribeEvents();
   }
 
   private void OnDisable() {
+    UnsuscribeEvents();
+  }
+
+  private void UnsuscribeEvents() {
     InputProvider.OnHasMove -= OnHasMove;
+    InputProvider.OnHasShoot -= OnHasShoot;
     InputProvider.OnHasShoot -= OnHasShoot;
   }
 }

@@ -192,11 +192,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 359344f5f70836b409c2b8f0a53db761, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnProjectilesPoints:
-  - {fileID: 6052892193119174608}
-  - {fileID: 6052892192964285467}
-  prefab: {fileID: 893696515293339645, guid: 8c3aa22455d33ca41850ee80eb6274c7, type: 3}
-  nextFire: 0.75
+  normalShoot:
+    canFire: 1
+    spawnProjectilesPoints:
+    - {fileID: 6052892193119174608}
+    - {fileID: 6052892192964285467}
+    prefab: {fileID: 893696515293339645, guid: 8c3aa22455d33ca41850ee80eb6274c7, type: 3}
+    nextFire: 1.5
+  firstAbilityShoot:
+    canFire: 1
+    spawnProjectilesPoints: []
+    prefab: {fileID: 0}
+    nextFire: 1
 --- !u!114 &2121946116
 MonoBehaviour:
   m_ObjectHideFlags: 0
