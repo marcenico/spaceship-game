@@ -2,14 +2,12 @@
 using UnityEngine.Assertions;
 
 [RequireComponent(typeof(MovementController))]
-[RequireComponent(typeof(ShootController))]
 public class PlayerBehaviour : MonoBehaviour {
   private MovementController movementController = null;
-  private ShootController shootController = null;
+  [SerializeField] private ShootController shootController = null;
 
   private void Start() {
     movementController = GetComponent<MovementController>();
-    shootController = GetComponent<ShootController>();
     InputProvider.OnHasMove += OnHasMove;
     InputProvider.OnHasShoot += OnHasShoot;
     InputProvider.OnHasShootFirstHability += OnHasShootFirstHability;
@@ -23,12 +21,12 @@ public class PlayerBehaviour : MonoBehaviour {
   }
 
   private void OnHasShoot() {
-    Assert.IsNotNull(shootController, message: $"No debe ser nulo {shootController}");
+    if (!shootController) return;
     StartCoroutine(shootController.Shoot());
   }
 
   private void OnHasShootFirstHability() {
-    Assert.IsNotNull(shootController, message: $"No debe ser nulo {shootController}");
+    if (!shootController) return;
     StartCoroutine(shootController.ShootFirstAbility());
   }
 

@@ -38,13 +38,11 @@ public class PoolController : MonoBehaviour {
     if (pool.gameObjects.Count > 0) {
       go = pool.gameObjects[pool.gameObjects.Count - 1];
       pool.gameObjects.RemoveAt(pool.gameObjects.Count - 1);
-      go.SetActive(true);
       return go;
     } else {
       go = Instantiate(pool.prefab, Vector3.zero, pool.prefab.transform.rotation);
       go.name = pool.prefab.name;
       pool.gameObjects.Add(go);
-      go.SetActive(true);
       return go;
     }
   }

@@ -24,5 +24,6 @@ public class SpawnController : MonoBehaviour {
   private void Spawn(Vector3 position) {
     GameObject go = PoolController.Instance.GetOne(prefab.name);
     go.transform.position = position;
+    go.SetActive(true);
   }
 }
