@@ -15,4 +15,8 @@ public class EnemyBehaviour : MonoBehaviour {
     movementController.DoMovement();
     StartCoroutine(shootController.Shoot());
   }
+
+  private void OnDisable() {
+    PoolController.Instance.ReturnOneToPool(gameObject);
+  }
 }

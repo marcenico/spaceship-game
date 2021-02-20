@@ -53,6 +53,7 @@
      <Compile Include="Assets\Scripts\Controllers\MovementController.cs" />
      <Compile Include="Assets\Scripts\Controllers\PoolController.cs" />
      <Compile Include="Assets\Scripts\Controllers\ShootController.cs" />
+     <Compile Include="Assets\Scripts\Controllers\SpawnController.cs" />
      <Compile Include="Assets\Scripts\Extension\Vector3Extension.cs" />
      <Compile Include="Assets\Scripts\Interfaces\IInputable.cs" />
      <Compile Include="Assets\Scripts\Interfaces\IShootable.cs" />

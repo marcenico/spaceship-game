@@ -8,7 +8,7 @@ public class DestroyInvisible : MonoBehaviour {
   public void OnBecameInvisible() {
     if (onlyDeactivate) {
       if (gameObject.activeInHierarchy) {
-        StartCoroutine("BecameInivisible");
+        StartCoroutine(BecameInivisible());
       }
     } else {
       Destroy(transform.root.gameObject, waitingTime);

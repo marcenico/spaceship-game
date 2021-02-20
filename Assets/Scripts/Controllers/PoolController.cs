@@ -5,7 +5,7 @@ using System.Collections.Generic;
 public class Pool {
   public int initialSizeValue = 12;
   public GameObject prefab = null;
-  [HideInInspector] public List<GameObject> gameObjects = new List<GameObject>();
+  public List<GameObject> gameObjects = new List<GameObject>();
 }
 
 public class PoolController : MonoBehaviour {
@@ -24,7 +24,7 @@ public class PoolController : MonoBehaviour {
   private void FillPools() {
     foreach (Pool pool in pools) {
       for (int i = 0; i < pool.initialSizeValue; i++) {
-        GameObject go = Instantiate(pool.prefab, Vector3.zero, Quaternion.identity);
+        GameObject go = Instantiate(pool.prefab, Vector3.zero, pool.prefab.transform.rotation);
         go.name = pool.prefab.name;
         go.SetActive(false);
         pool.gameObjects.Add(go);
@@ -38,11 +38,13 @@ public class PoolController : MonoBehaviour {
     if (pool.gameObjects.Count > 0) {
       go = pool.gameObjects[pool.gameObjects.Count - 1];
       pool.gameObjects.RemoveAt(pool.gameObjects.Count - 1);
+      go.SetActive(true);
       return go;
     } else {
-      go = Instantiate(pool.prefab, Vector3.zero, Quaternion.identity);
+      go = Instantiate(pool.prefab, Vector3.zero, pool.prefab.transform.rotation);
       go.name = pool.prefab.name;
       pool.gameObjects.Add(go);
+      go.SetActive(true);
       return go;
     }
   }

@@ -6,7 +6,7 @@ public class AutoDestroyObject : MonoBehaviour {
   [SerializeField] private float timeOfLive = 0.5f;
 
   private void OnEnable() {
-    StartCoroutine("CheckIfAlive");
+    StartCoroutine(CheckIfAlive());
   }
 
   private IEnumerator CheckIfAlive() {
