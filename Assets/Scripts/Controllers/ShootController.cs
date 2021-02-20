@@ -16,8 +16,8 @@ public class ShootController : MonoBehaviour, IShootable {
   public IEnumerator Shoot() {
     if (!normalShoot.canFire) yield break;
     foreach (var spawnPoint in normalShoot.spawnProjectilesPoints) {
-      GameObject poolPrefab = PoolController.Instance.GetOne(normalShoot.prefab.name);
-      poolPrefab.transform.position = spawnPoint.position;
+      GameObject go = PoolController.Instance.GetOne(normalShoot.prefab.name);
+      go.transform.position = spawnPoint.position;
     }
     normalShoot.canFire = false;
     yield return new WaitForSeconds(normalShoot.nextFire);
@@ -27,8 +27,8 @@ public class ShootController : MonoBehaviour, IShootable {
   public IEnumerator ShootFirstAbility() {
     if (!firstAbilityShoot.canFire) yield break;
     foreach (var spawnPoint in firstAbilityShoot.spawnProjectilesPoints) {
-      GameObject poolPrefab = PoolController.Instance.GetOne(firstAbilityShoot.prefab.name);
-      poolPrefab.transform.position = spawnPoint.position;
+      GameObject go = PoolController.Instance.GetOne(firstAbilityShoot.prefab.name);
+      go.transform.position = spawnPoint.position;
     }
     firstAbilityShoot.canFire = false;
     yield return new WaitForSeconds(firstAbilityShoot.nextFire);
