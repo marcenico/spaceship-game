@@ -258,7 +258,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   onlyDeactivate: 1
-  timeOfLive: 2
+  timeOfLive: 4
 --- !u!82 &7049737049554367054
 AudioSource:
   m_ObjectHideFlags: 0
