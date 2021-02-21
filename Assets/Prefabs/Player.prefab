@@ -286,7 +286,7 @@ GameObject:
   - component: {fileID: 2747801755771066167}
   - component: {fileID: 1474905523289474899}
   m_Layer: 9
-  m_Name: 2-Spaceship
+  m_Name: Skin1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -194,6 +194,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 6554150793891237155, guid: b9c0a834636264b44b3e3b1b3b4a5c45, type: 3}
+  enemyConfigs:
+  - {fileID: 11400000, guid: b5d3d4a5dcac7ca4ea26d59c03f19e28, type: 2}
+  - {fileID: 11400000, guid: 2a4d51e4a511fd6459409c7a8455015a, type: 2}
   spawnPosition: {x: 17, y: 15, z: 0}
   initialWaitTime: 1
   spawnCadence: 0.1
