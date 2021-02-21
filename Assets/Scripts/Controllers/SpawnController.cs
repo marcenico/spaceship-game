@@ -1,8 +1,10 @@
 using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class SpawnController : MonoBehaviour {
   [SerializeField] private GameObject prefab = null;
+  [SerializeField] private List<EnemyConfig> enemyConfigs = new List<EnemyConfig>();
   [SerializeField] private Vector3 spawnPosition = Vector3.zero;
   [SerializeField] private float initialWaitTime = 1f;
   [SerializeField] private float spawnCadence = 1f;
@@ -24,6 +26,7 @@ public class SpawnController : MonoBehaviour {
   private void Spawn(Vector3 position) {
     GameObject go = PoolController.Instance.GetOne(prefab.name);
     go.transform.position = position;
+    go.GetComponent<EnemyBehaviour>().enemyConfig = enemyConfigs[Random.Range(0, enemyConfigs.Count)];
     go.SetActive(true);
   }
 }
