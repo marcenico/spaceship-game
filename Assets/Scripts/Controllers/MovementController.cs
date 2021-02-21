@@ -6,7 +6,7 @@ public class MovementController : MonoBehaviour {
   public Vector3 direction;
   [HideInInspector] public Rigidbody2D rigidBody = null;
 
-  private void Start() {
+  private void Awake() {
     rigidBody = GetComponent<Rigidbody2D>();
   }
 

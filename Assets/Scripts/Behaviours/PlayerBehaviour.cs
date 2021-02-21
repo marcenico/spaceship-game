@@ -6,8 +6,11 @@ public class PlayerBehaviour : MonoBehaviour {
   private MovementController movementController = null;
   [SerializeField] private ShootController shootController = null;
 
-  private void Start() {
+  private void Awake() {
     movementController = GetComponent<MovementController>();
+  }
+
+  private void Start() {
     InputProvider.OnHasMove += OnHasMove;
     InputProvider.OnHasShoot += OnHasShoot;
     InputProvider.OnHasShootFirstHability += OnHasShootFirstHability;

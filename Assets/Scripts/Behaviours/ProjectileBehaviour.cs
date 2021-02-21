@@ -4,7 +4,7 @@
 public class ProjectileBehaviour : MonoBehaviour {
   private MovementController movementController = null;
 
-  private void Start() {
+  private void Awake() {
     movementController = GetComponent<MovementController>();
   }
 
