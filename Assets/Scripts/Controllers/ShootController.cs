@@ -15,6 +15,12 @@ public class ShootController : MonoBehaviour, IShootable {
 
   public IEnumerator Shoot() {
     if (!normalShoot.canFire) yield break;
+
+    if (PoolController.Instance == null) {
+      Debug.LogWarning("No hay instancia de PoolController");
+      yield break;
+    }
+
     foreach (var spawnPoint in normalShoot.spawnProjectilesPoints) {
       GameObject go = PoolController.Instance.GetOne(normalShoot.prefab.name);
       go.transform.position = spawnPoint.position;
