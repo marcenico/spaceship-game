@@ -2,8 +2,8 @@
 
 [RequireComponent(typeof(Rigidbody2D))]
 public class MovementController : MonoBehaviour {
-  public float speed = 10f;
-  public Vector3 direction;
+  [ReadOnly] public float speed = 10f;
+  [HideInInspector] public Vector3 direction;
   [HideInInspector] public Rigidbody2D rigidBody = null;
 
   private void Awake() {
@@ -12,5 +12,9 @@ public class MovementController : MonoBehaviour {
 
   public void DoMovement() {
     rigidBody.velocity = direction * speed * Time.fixedDeltaTime * 100;
+  }
+
+  public void SetConfig(PlayerConfig config) {
+    speed = config.speed;
   }
 }

@@ -3,17 +3,26 @@ using UnityEngine.Assertions;
 
 [RequireComponent(typeof(MovementController))]
 public class PlayerBehaviour : MonoBehaviour {
-  private MovementController movementController = null;
+  [SerializeField] private PlayerConfig playerConfig = null;
   [SerializeField] private ShootController shootController = null;
+  [SerializeField] private SpriteRenderer spriteRenderer = null;
+  private MovementController movementController = null;
 
   private void Awake() {
     movementController = GetComponent<MovementController>();
   }
 
   private void Start() {
+    SetConfig();
     InputProvider.OnHasMove += OnHasMove;
     InputProvider.OnHasShoot += OnHasShoot;
     InputProvider.OnHasShootFirstHability += OnHasShootFirstHability;
+  }
+
+  private void SetConfig() {
+    if (movementController) movementController.SetConfig(playerConfig);
+    if (shootController) shootController.SetConfig(playerConfig);
+    spriteRenderer.sprite = playerConfig.skin;
   }
 
   private void OnHasMove(Vector3 direction) {

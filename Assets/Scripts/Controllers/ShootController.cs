@@ -4,14 +4,19 @@ using System.Collections;
 [System.Serializable]
 public class Shoot {
   [HideInInspector] public bool canFire = true;
+  [ReadOnly] public GameObject prefab = null;
+  [ReadOnly] public float nextFire = 1f;
   public Transform[] spawnProjectilesPoints = null;
-  public GameObject prefab = null;
-  public float nextFire = 1f;
 }
 
 public class ShootController : MonoBehaviour, IShootable {
   [SerializeField] private Shoot normalShoot = null;
   [SerializeField] private Shoot firstAbilityShoot = null;
+
+  public void SetConfig(PlayerConfig config) {
+    normalShoot.prefab = config.shootPrefab;
+    normalShoot.nextFire = config.nextFire;
+  }
 
   public IEnumerator Shoot() {
     if (!normalShoot.canFire) yield break;
