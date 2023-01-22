@@ -5,7 +5,9 @@ public class PlayerConfig : ScriptableObject {
   public float life = 100f;
   public float shield = 100f;
   public float speed = 4f;
-  public Sprite skin;
-  public GameObject shootPrefab;
+  public Sprite skin = null;
+  public GameObject shootPrefab = null;
+  public GameObject shootSpecialPrefab = null;
   public float nextFire = 0.5f;
+  public float nextFireSpecial = 10f;
 }

@@ -4,18 +4,20 @@ using System.Collections;
 [System.Serializable]
 public class Shoot {
   [HideInInspector] public bool canFire = true;
-  [ReadOnly] public GameObject prefab = null;
+  public GameObject prefab = null;
   [ReadOnly] public float nextFire = 1f;
   public Transform[] spawnProjectilesPoints = null;
 }
 
 public class ShootController : MonoBehaviour, IShootable {
   [SerializeField] private Shoot normalShoot = null;
-  [SerializeField] private Shoot firstAbilityShoot = null;
+  [SerializeField] private Shoot shootSpecial = null;
 
   public void SetConfig(PlayerConfig config) {
     normalShoot.prefab = config.shootPrefab;
     normalShoot.nextFire = config.nextFire;
+    shootSpecial.prefab = config.shootSpecialPrefab;
+    shootSpecial.nextFire = config.nextFireSpecial;
   }
 
   public IEnumerator Shoot() {
@@ -36,15 +38,15 @@ public class ShootController : MonoBehaviour, IShootable {
     normalShoot.canFire = true;
   }
 
-  public IEnumerator ShootFirstAbility() {
-    if (!firstAbilityShoot.canFire) yield break;
-    foreach (var spawnPoint in firstAbilityShoot.spawnProjectilesPoints) {
-      GameObject go = PoolController.Instance.GetOne(firstAbilityShoot.prefab.name);
+  public IEnumerator ShootSpecial() {
+    if (!shootSpecial.canFire) yield break;
+    foreach (var spawnPoint in shootSpecial.spawnProjectilesPoints) {
+      GameObject go = PoolController.Instance.GetOne(shootSpecial.prefab.name);
       go.transform.position = spawnPoint.position;
       go.SetActive(true);
     }
-    firstAbilityShoot.canFire = false;
-    yield return new WaitForSeconds(firstAbilityShoot.nextFire);
-    firstAbilityShoot.canFire = true;
+    shootSpecial.canFire = false;
+    yield return new WaitForSeconds(shootSpecial.nextFire);
+    shootSpecial.canFire = true;
   }
 }

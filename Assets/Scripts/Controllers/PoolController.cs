@@ -1,11 +1,12 @@
 using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine.Assertions;
 
 [System.Serializable]
 public class Pool {
   public int initialSizeValue = 12;
   public GameObject prefab = null;
-  public List<GameObject> gameObjects = new List<GameObject>();
+  [HideInInspector] public List<GameObject> gameObjects = new List<GameObject>();
 }
 
 public class PoolController : MonoBehaviour {
@@ -24,6 +25,7 @@ public class PoolController : MonoBehaviour {
   private void FillPools() {
     foreach (Pool pool in pools) {
       for (int i = 0; i < pool.initialSizeValue; i++) {
+        if (!pool.prefab) continue;
         GameObject go = Instantiate(pool.prefab, Vector3.zero, pool.prefab.transform.rotation);
         go.name = pool.prefab.name;
         go.SetActive(false);

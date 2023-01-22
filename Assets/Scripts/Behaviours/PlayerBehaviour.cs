@@ -39,7 +39,7 @@ public class PlayerBehaviour : MonoBehaviour {
 
   private void OnHasShootFirstHability() {
     if (!shootController) return;
-    StartCoroutine(shootController.ShootFirstAbility());
+    StartCoroutine(shootController.ShootSpecial());
   }
 
   private void OnDestroy() {
