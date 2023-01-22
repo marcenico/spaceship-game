@@ -17,7 +17,7 @@ public class PlayerBehaviour : MonoBehaviour {
     SetConfig();
     InputProvider.OnHasMove += OnHasMove;
     InputProvider.OnHasShoot += OnHasShoot;
-    InputProvider.OnHasShootFirstHability += OnHasShootFirstHability;
+    InputProvider.OnHasShootSpecial += OnHasShootSpecial;
   }
 
   private void SetConfig() {
@@ -38,7 +38,7 @@ public class PlayerBehaviour : MonoBehaviour {
     StartCoroutine(shootController.Shoot());
   }
 
-  private void OnHasShootFirstHability() {
+  private void OnHasShootSpecial() {
     if (!shootController) return;
     StartCoroutine(shootController.ShootSpecial());
   }

@@ -7,8 +7,8 @@ public static class InputProvider {
   public delegate void HasShoot();
   public static event HasShoot OnHasShoot;
 
-  public delegate void HasShootFirstHability();
-  public static event HasShootFirstHability OnHasShootFirstHability;
+  public delegate void HasShootSpecial();
+  public static event HasShootSpecial OnHasShootSpecial;
 
   public static void TriggerOnHasMove(Vector3 direction) {
     OnHasMove?.Invoke(direction);
@@ -19,6 +19,6 @@ public static class InputProvider {
   }
 
   public static void TriggerOnHasShootSpecial() {
-    OnHasShootFirstHability?.Invoke();
+    OnHasShootSpecial?.Invoke();
   }
 }
