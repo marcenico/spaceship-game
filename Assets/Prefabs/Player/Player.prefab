@@ -72,6 +72,7 @@ GameObject:
   - component: {fileID: 1429732392}
   - component: {fileID: 8074766629167748958}
   - component: {fileID: 5723821708934876058}
+  - component: {fileID: 2345477762929659046}
   - component: {fileID: 1450232316}
   - component: {fileID: 3161383961105079889}
   - component: {fileID: 8775696021900138177}
@@ -167,6 +168,20 @@ MonoBehaviour:
   playerConfig: {fileID: 11400000, guid: 459a53da824552d48b484c153ed77bac, type: 2}
   shootController: {fileID: 4294005772966740394}
   spriteRenderer: {fileID: 2747801755771066167}
+--- !u!114 &2345477762929659046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1077824905912712917}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c302088ca76e56f44adb41c84b0bbf85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  life: 100
+  shield: 100
 --- !u!114 &1450232316
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -288,7 +303,7 @@ GameObject:
   - component: {fileID: 2747801755771066167}
   - component: {fileID: 1474905523289474899}
   m_Layer: 9
-  m_Name: Skin1
+  m_Name: Skin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

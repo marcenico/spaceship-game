@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.Assertions;
 
+[RequireComponent(typeof(StatsController))]
 [RequireComponent(typeof(MovementController))]
 public class PlayerBehaviour : MonoBehaviour {
   [SerializeField] private PlayerConfig playerConfig = null;

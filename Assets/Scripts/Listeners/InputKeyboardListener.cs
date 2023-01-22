@@ -9,7 +9,7 @@ public class InputKeyboardListener : MonoBehaviour, IInputable {
 
   private void Update() {
     if (Input.GetButton("Fire1")) Shoot();
-    if (Input.GetKey(KeyCode.E)) ShootFirstAbility();
+    if (Input.GetKey(KeyCode.E)) ShootSpecial();
   }
 
   public void GetDirection(Vector3 direction) {
@@ -20,7 +20,7 @@ public class InputKeyboardListener : MonoBehaviour, IInputable {
     InputProvider.TriggerOnHasShoot();
   }
 
-  public void ShootFirstAbility() {
-    InputProvider.TriggerOnHasShootFirstAbility();
+  public void ShootSpecial() {
+    InputProvider.TriggerOnHasShootSpecial();
   }
 }

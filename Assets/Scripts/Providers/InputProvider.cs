@@ -18,7 +18,7 @@ public static class InputProvider {
     OnHasShoot?.Invoke();
   }
 
-  public static void TriggerOnHasShootFirstAbility() {
+  public static void TriggerOnHasShootSpecial() {
     OnHasShootFirstHability?.Invoke();
   }
 }
