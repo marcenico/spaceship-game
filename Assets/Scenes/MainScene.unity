@@ -280,7 +280,7 @@ PrefabInstance:
     - target: {fileID: 1442374990677204241, guid: a931ddb64918c604797ababde9cd8a58,
         type: 3}
       propertyPath: m_Name
-      value: SpawnController
+      value: SpawnEnemyController
       objectReference: {fileID: 0}
     - target: {fileID: 1442374990677204242, guid: a931ddb64918c604797ababde9cd8a58,
         type: 3}

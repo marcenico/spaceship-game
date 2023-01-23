@@ -14,7 +14,7 @@ public class MovementController : MonoBehaviour {
     rigidBody.velocity = direction * speed * Time.fixedDeltaTime * 100;
   }
 
-  public void SetConfig(PlayerConfig config) {
+  public void SetConfig(Character config) {
     speed = config.speed;
   }
 }

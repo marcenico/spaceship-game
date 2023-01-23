@@ -53,7 +53,7 @@
      <Compile Include="Assets\Scripts\Controllers\MovementController.cs" />
      <Compile Include="Assets\Scripts\Controllers\PoolController.cs" />
      <Compile Include="Assets\Scripts\Controllers\ShootController.cs" />
-     <Compile Include="Assets\Scripts\Controllers\SpawnController.cs" />
+     <Compile Include="Assets\Scripts\Controllers\SpawnEnemyController.cs" />
      <Compile Include="Assets\Scripts\Controllers\StatsController.cs" />
      <Compile Include="Assets\Scripts\Extension\Vector3Extension.cs" />
      <Compile Include="Assets\Scripts\Interfaces\IInputable.cs" />
@@ -62,8 +62,8 @@
      <Compile Include="Assets\Scripts\Listeners\WindowResizeListener.cs" />
      <Compile Include="Assets\Scripts\Providers\BoundaryProvider.cs" />
      <Compile Include="Assets\Scripts\Providers\InputProvider.cs" />
-     <Compile Include="Assets\Scripts\ScriptableObjects\EnemyConfig.cs" />
-     <Compile Include="Assets\Scripts\ScriptableObjects\PlayerConfig.cs" />
+     <Compile Include="Assets\Scripts\ScriptableObjects\Character.cs" />
+     <Compile Include="Assets\Scripts\ScriptableObjects\Projectile.cs" />
      <Compile Include="Assets\Scripts\Utils\AutoDestroyObject.cs" />
      <Compile Include="Assets\Scripts\Utils\AutoScroller.cs" />
      <Compile Include="Assets\Scripts\Utils\DestroyInvisible.cs" />

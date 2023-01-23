@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 630892525}
   m_Layer: 9
-  m_Name: ShootCannon2
+  m_Name: ShootCannon-2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -40,7 +40,7 @@ GameObject:
   m_Component:
   - component: {fileID: 778030118}
   m_Layer: 9
-  m_Name: ShootCannon
+  m_Name: ShootCannon-1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -165,7 +165,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff915c5461c586348a9fc6b6473138e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerConfig: {fileID: 11400000, guid: 459a53da824552d48b484c153ed77bac, type: 2}
+  character: {fileID: 11400000, guid: 88e9414fb46748947a9c7f2e9243958f, type: 2}
   shootController: {fileID: 4294005772966740394}
   spriteRenderer: {fileID: 2747801755771066167}
 --- !u!114 &2345477762929659046
@@ -211,29 +211,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   action:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 8775696021900138177}
-        m_MethodName: DoDestroy
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 6186131407980106843}
-        m_MethodName: DoInstanciate
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &8775696021900138177
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -362,7 +340,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: 8f723de931d5c0844a5220bcd8d02de4, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -370,7 +348,7 @@ SpriteRenderer:
   m_Size: {x: 0.64, y: 0.64}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!95 &1474905523289474899
@@ -478,7 +456,8 @@ MonoBehaviour:
     - {fileID: 630892525}
   shootSpecial:
     canFire: 1
-    prefab: {fileID: 0}
+    prefab: {fileID: 4055875804976583795, guid: 0e6a7f45faa91584a9f9913352bcd1b1,
+      type: 3}
     nextFire: 1
     spawnProjectilesPoints:
     - {fileID: 5152069851217740987}

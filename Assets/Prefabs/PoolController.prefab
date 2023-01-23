@@ -51,11 +51,15 @@ MonoBehaviour:
   - initialSizeValue: 50
     prefab: {fileID: 893696515293339645, guid: 8c3aa22455d33ca41850ee80eb6274c7, type: 3}
     gameObjects: []
-  - initialSizeValue: 10
-    prefab: {fileID: 6554150793891237155, guid: b9c0a834636264b44b3e3b1b3b4a5c45,
+  - initialSizeValue: 5
+    prefab: {fileID: 3140187658767066757, guid: 2dcaf036a1ea38c4d84ad5b4c68bc31d,
       type: 3}
     gameObjects: []
   - initialSizeValue: 2
     prefab: {fileID: 4055875804976583795, guid: 0e6a7f45faa91584a9f9913352bcd1b1,
+      type: 3}
+    gameObjects: []
+  - initialSizeValue: 5
+    prefab: {fileID: 4554290649193326102, guid: a003df76c4f3e704cb46740d0a3319cb,
       type: 3}
     gameObjects: []

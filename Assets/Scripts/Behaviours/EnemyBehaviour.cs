@@ -1,14 +1,17 @@
 using UnityEngine;
 
+[RequireComponent(typeof(StatsController))]
 [RequireComponent(typeof(MovementController))]
 public class EnemyBehaviour : MonoBehaviour {
-  [HideInInspector] public EnemyConfig enemyConfig = null;
+  [SerializeField] public Character character = null;
   [SerializeField] private ShootController shootController = null;
   [SerializeField] private SpriteRenderer spriteRenderer = null;
+  private StatsController statsController = null;
   private MovementController movementController = null;
 
 
   private void Awake() {
+    statsController = GetComponent<StatsController>();
     movementController = GetComponent<MovementController>();
   }
 
@@ -22,8 +25,10 @@ public class EnemyBehaviour : MonoBehaviour {
   }
 
   private void SetConfig() {
-    if (movementController) movementController.speed = enemyConfig.speed;
-    spriteRenderer.sprite = enemyConfig.sprite;
+    if (movementController) movementController.SetConfig(character);
+    if (statsController) statsController.SetConfig(character.life, character.shield);
+    if (shootController) shootController.SetConfig(character);
+    spriteRenderer.sprite = character.skin;
   }
 
   private void OnDisable() {

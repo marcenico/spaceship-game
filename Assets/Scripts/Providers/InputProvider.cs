@@ -10,6 +10,9 @@ public static class InputProvider {
   public delegate void HasShootSpecial();
   public static event HasShootSpecial OnHasShootSpecial;
 
+  public delegate void HasDamage(float damage);
+  public static event HasDamage OnHasDamage;
+
   public static void TriggerOnHasMove(Vector3 direction) {
     OnHasMove?.Invoke(direction);
   }
@@ -20,5 +23,9 @@ public static class InputProvider {
 
   public static void TriggerOnHasShootSpecial() {
     OnHasShootSpecial?.Invoke();
+  }
+
+  public static void TriggerOnHasDamage(float damage) {
+    OnHasDamage?.Invoke(damage);
   }
 }

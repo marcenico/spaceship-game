@@ -4,13 +4,15 @@ using UnityEngine.Assertions;
 [RequireComponent(typeof(StatsController))]
 [RequireComponent(typeof(MovementController))]
 public class PlayerBehaviour : MonoBehaviour {
-  [SerializeField] private PlayerConfig playerConfig = null;
+  [SerializeField] private Character character = null;
   [SerializeField] private ShootController shootController = null;
   [SerializeField] private SpriteRenderer spriteRenderer = null;
+  private StatsController statsController = null;
   private MovementController movementController = null;
 
   private void Awake() {
     movementController = GetComponent<MovementController>();
+    statsController = GetComponent<StatsController>();
   }
 
   private void Start() {
@@ -18,12 +20,14 @@ public class PlayerBehaviour : MonoBehaviour {
     InputProvider.OnHasMove += OnHasMove;
     InputProvider.OnHasShoot += OnHasShoot;
     InputProvider.OnHasShootSpecial += OnHasShootSpecial;
+    InputProvider.OnHasDamage += OnHasDamage;
   }
 
   private void SetConfig() {
-    if (movementController) movementController.SetConfig(playerConfig);
-    if (shootController) shootController.SetConfig(playerConfig);
-    spriteRenderer.sprite = playerConfig.skin;
+    if (movementController) movementController.SetConfig(character);
+    if (statsController) statsController.SetConfig(character.life, character.shield);
+    if (shootController) shootController.SetConfig(character);
+    spriteRenderer.sprite = character.skin;
   }
 
   private void OnHasMove(Vector3 direction) {
@@ -41,6 +45,10 @@ public class PlayerBehaviour : MonoBehaviour {
   private void OnHasShootSpecial() {
     if (!shootController) return;
     StartCoroutine(shootController.ShootSpecial());
+  }
+
+  private void OnHasDamage(float damage) {
+    statsController.TakeLife(damage);
   }
 
   private void OnDestroy() {

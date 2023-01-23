@@ -4,7 +4,7 @@ using System.Collections;
 [System.Serializable]
 public class Shoot {
   [HideInInspector] public bool canFire = true;
-  public GameObject prefab = null;
+  [ReadOnly] public GameObject prefab = null;
   [ReadOnly] public float nextFire = 1f;
   public Transform[] spawnProjectilesPoints = null;
 }
@@ -13,7 +13,7 @@ public class ShootController : MonoBehaviour, IShootable {
   [SerializeField] private Shoot normalShoot = null;
   [SerializeField] private Shoot shootSpecial = null;
 
-  public void SetConfig(PlayerConfig config) {
+  public void SetConfig(Character config) {
     normalShoot.prefab = config.shootPrefab;
     normalShoot.nextFire = config.nextFire;
     shootSpecial.prefab = config.shootSpecialPrefab;

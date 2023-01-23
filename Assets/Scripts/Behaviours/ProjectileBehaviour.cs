@@ -2,6 +2,7 @@
 
 [RequireComponent(typeof(MovementController))]
 public class ProjectileBehaviour : MonoBehaviour {
+  [SerializeField] public Projectile config = null;
   private MovementController movementController = null;
 
   private void Awake() {
