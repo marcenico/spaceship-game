@@ -20,6 +20,7 @@ public class PlayerBehaviour : MonoBehaviour {
     InputProvider.OnHasMove += OnHasMove;
     InputProvider.OnHasShoot += OnHasShoot;
     InputProvider.OnHasShootSpecial += OnHasShootSpecial;
+    InputProvider.OnHasDamage += OnHasDamage;
   }
 
   public void OnDefeat() {
@@ -51,6 +52,8 @@ public class PlayerBehaviour : MonoBehaviour {
 
   private void OnHasDamage(float damage) {
     statsController.TakeLife(damage);
+    StatsTextProvider.TriggerOnHasLifeChange(statsController.life.ToString());
+    StatsTextProvider.TriggerOnHasShieldChange(statsController.shield.ToString());
   }
 
   private void OnDestroy() {

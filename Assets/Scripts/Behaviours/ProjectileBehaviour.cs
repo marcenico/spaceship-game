@@ -21,6 +21,14 @@ public class ProjectileBehaviour : MonoBehaviour {
   }
 
   public void MakeDamage() {
-    triggerDo.statsTarget.TakeLife(config.damage);
+    switch (gameObject.layer) {
+      case 11: // Proyectil enemigo
+        InputProvider.TriggerOnHasDamage(config.damage);
+        break;
+      case 8: // Proyectil player
+        triggerDo.statsTarget.TakeLife(config.damage);
+        break;
+      default: break;
+    }
   }
 }
