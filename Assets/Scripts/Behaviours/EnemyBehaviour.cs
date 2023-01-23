@@ -26,12 +26,16 @@ public class EnemyBehaviour : MonoBehaviour {
 
   private void SetConfig() {
     if (movementController) movementController.SetConfig(character);
-    if (statsController) statsController.SetConfig(character.life, character.shield);
+    if (statsController) statsController.SetConfig(character);
     if (shootController) shootController.SetConfig(character);
     spriteRenderer.sprite = character.skin;
   }
 
   private void OnDisable() {
     PoolController.Instance.ReturnOneToPool(gameObject);
+  }
+
+  private void OnEnable() {
+    SetConfig();
   }
 }

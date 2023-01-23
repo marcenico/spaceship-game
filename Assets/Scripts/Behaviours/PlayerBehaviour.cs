@@ -20,12 +20,14 @@ public class PlayerBehaviour : MonoBehaviour {
     InputProvider.OnHasMove += OnHasMove;
     InputProvider.OnHasShoot += OnHasShoot;
     InputProvider.OnHasShootSpecial += OnHasShootSpecial;
-    InputProvider.OnHasDamage += OnHasDamage;
+  }
+
+  public void OnDefeat() {
   }
 
   private void SetConfig() {
     if (movementController) movementController.SetConfig(character);
-    if (statsController) statsController.SetConfig(character.life, character.shield);
+    if (statsController) statsController.SetConfig(character);
     if (shootController) shootController.SetConfig(character);
     spriteRenderer.sprite = character.skin;
   }

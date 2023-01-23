@@ -69,6 +69,7 @@
      <Compile Include="Assets\Scripts\Utils\DestroyInvisible.cs" />
      <Compile Include="Assets\Scripts\Utils\DestroyObject.cs" />
      <Compile Include="Assets\Scripts\Utils\Instanciator.cs" />
+     <Compile Include="Assets\Scripts\Utils\OnDefeatDo.cs" />
      <Compile Include="Assets\Scripts\Utils\OnTriggerDo.cs" />
      <Compile Include="Assets\Scripts\Utils\ReadOnlyAttribute.cs" />
      <Compile Include="Assets\Scripts\Utils\ReadOnlyDrawer.cs" />
