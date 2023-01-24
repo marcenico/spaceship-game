@@ -380,7 +380,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   onlyDeactivate: 1
-  waitingTime: 0
+  waitingTime: 1
 --- !u!114 &715826549978977305
 MonoBehaviour:
   m_ObjectHideFlags: 0
