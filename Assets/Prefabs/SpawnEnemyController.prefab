@@ -48,5 +48,5 @@ MonoBehaviour:
   - {fileID: 4554290649193326102, guid: a003df76c4f3e704cb46740d0a3319cb, type: 3}
   spawnPosition: {x: 15, y: 8, z: 0}
   initialWaitTime: 1
-  spawnCadence: 1
-  amountToSpawn: 10
+  spawnCadence: 2.5
+  amountToSpawn: 25

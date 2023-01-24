@@ -13,6 +13,9 @@ public static class InputProvider {
   public delegate void HasDamage(float damage);
   public static event HasDamage OnHasDamage;
 
+  public delegate void HasLevelUp();
+  public static event HasLevelUp OnHasLevelUp;
+
 
   public static void TriggerOnHasMove(Vector3 direction) {
     OnHasMove?.Invoke(direction);
@@ -28,5 +31,9 @@ public static class InputProvider {
 
   public static void TriggerOnHasDamage(float damage) {
     OnHasDamage?.Invoke(damage);
+  }
+
+  public static void TriggerOnHasLevelUp() {
+    OnHasLevelUp?.Invoke();
   }
 }

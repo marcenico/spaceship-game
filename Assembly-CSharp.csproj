@@ -61,6 +61,7 @@
      <Compile Include="Assets\Scripts\Interfaces\IShootable.cs" />
      <Compile Include="Assets\Scripts\Listeners\InputKeyboardListener.cs" />
      <Compile Include="Assets\Scripts\Listeners\WindowResizeListener.cs" />
+     <Compile Include="Assets\Scripts\Managers\GameManager.cs" />
      <Compile Include="Assets\Scripts\Providers\BoundaryProvider.cs" />
      <Compile Include="Assets\Scripts\Providers\InputProvider.cs" />
      <Compile Include="Assets\Scripts\Providers\StatsTextProvider.cs" />
