@@ -5,6 +5,7 @@ public class UIStatsController : MonoBehaviour {
   [HideInInspector] public StatsController statsController = null;
   [SerializeField] private TextMeshProUGUI lifeText = null;
   [SerializeField] private TextMeshProUGUI shieldText = null;
+  [SerializeField] private TextMeshProUGUI experienceText = null;
 
   void Awake() {
     GameObject player = GameObject.FindGameObjectWithTag("Player");
@@ -16,6 +17,7 @@ public class UIStatsController : MonoBehaviour {
     OnHasShieldChange(statsController.shield.ToString());
     StatsTextProvider.OnHasLifeChange += OnHasLifeChange;
     StatsTextProvider.OnHasShieldChange += OnHasShieldChange;
+    StatsTextProvider.OnHasExperienceChange += OnHasExperienceChange;
   }
 
   private void OnHasLifeChange(string life) {
@@ -24,5 +26,9 @@ public class UIStatsController : MonoBehaviour {
 
   public void OnHasShieldChange(string shield) {
     shieldText.text = shield;
+  }
+
+  public void OnHasExperienceChange(string experience) {
+    experienceText.text = experience;
   }
 }

@@ -22,3 +22,4 @@ MonoBehaviour:
     type: 3}
   nextFire: 3
   nextFireSpecial: 10
+  experienceOnDead: 50

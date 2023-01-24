@@ -10,5 +10,5 @@ public class Character : ScriptableObject {
   public GameObject shootSpecialPrefab = null;
   public float nextFire = 0.5f;
   public float nextFireSpecial = 10f;
-
+  public float experienceOnDead = 10f;
 }

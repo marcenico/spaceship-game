@@ -13,7 +13,7 @@ public static class InputProvider {
   public delegate void HasDamage(float damage);
   public static event HasDamage OnHasDamage;
 
-  public delegate void HasLevelUp();
+  public delegate void HasLevelUp(Character levelUpCharactar);
   public static event HasLevelUp OnHasLevelUp;
 
 
@@ -33,7 +33,7 @@ public static class InputProvider {
     OnHasDamage?.Invoke(damage);
   }
 
-  public static void TriggerOnHasLevelUp() {
-    OnHasLevelUp?.Invoke();
+  public static void TriggerOnHasLevelUp(Character levelUpCharactar) {
+    OnHasLevelUp?.Invoke(levelUpCharactar);
   }
 }

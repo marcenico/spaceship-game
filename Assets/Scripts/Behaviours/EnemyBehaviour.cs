@@ -24,12 +24,17 @@ public class EnemyBehaviour : MonoBehaviour {
     if (shootController) StartCoroutine(shootController.Shoot());
   }
 
+  public void GiveExperience() {
+    GameManager.Instance.AddExperience(character.experienceOnDead);
+  }
+
   private void SetConfig() {
     if (movementController) movementController.SetConfig(character);
     if (statsController) statsController.SetConfig(character);
     if (shootController) shootController.SetConfig(character);
     spriteRenderer.sprite = character.skin;
   }
+
 
   private void OnDisable() {
     PoolController.Instance.ReturnOneToPool(gameObject);
