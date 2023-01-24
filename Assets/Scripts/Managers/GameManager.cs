@@ -38,7 +38,6 @@ public class GameManager : MonoBehaviour {
       if (playerLevel < playerLevelConfig.levelNumber && experience >= playerLevelConfig.experienceToLevelUp) {
         playerLevel += 1;
         InputProvider.TriggerOnHasLevelUp(characters[i]);
-        Debug.Log("Iteracion numero " + i);
         return;
       }
     }
