@@ -21,6 +21,7 @@ public class PlayerBehaviour : MonoBehaviour {
     InputProvider.OnHasShoot += OnHasShoot;
     InputProvider.OnHasShootSpecial += OnHasShootSpecial;
     InputProvider.OnHasDamage += OnHasDamage;
+    InputProvider.OnHasLevelUp += OnHasLevelUp;
   }
 
   public void OnDefeat() {
@@ -52,6 +53,13 @@ public class PlayerBehaviour : MonoBehaviour {
 
   private void OnHasDamage(float damage) {
     statsController.TakeLife(damage);
+    StatsTextProvider.TriggerOnHasLifeChange(statsController.life.ToString());
+    StatsTextProvider.TriggerOnHasShieldChange(statsController.shield.ToString());
+  }
+
+  private void OnHasLevelUp(Character levelUpCharacter) {
+    character = levelUpCharacter;
+    SetConfig();
     StatsTextProvider.TriggerOnHasLifeChange(statsController.life.ToString());
     StatsTextProvider.TriggerOnHasShieldChange(statsController.shield.ToString());
   }

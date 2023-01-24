@@ -1,6 +1,7 @@
 using UnityEngine;
 
 public class GameManager : MonoBehaviour {
+  #region Singleton Pattern
   private static GameManager instance;
 
   public static GameManager Instance {
@@ -12,8 +13,34 @@ public class GameManager : MonoBehaviour {
       return instance;
     }
   }
+  #endregion
+
+  [SerializeField] private Character[] characters = null;
+  private float experience = 0f;
+  private int playerLevel = 1;
 
   private void Awake() {
     instance = this;
   }
+
+  public void AddExperience(float newExperience) {
+    experience += newExperience;
+    StatsTextProvider.TriggerOnHasExperienceChange(experience.ToString());
+    LevelUp();
+  }
+
+  public void LevelUp() {
+    for (int i = 0; i < characters.Length; i++) {
+
+      if (characters[i].playerLevel is null) continue;
+
+      PlayerLevel playerLevelConfig = characters[i].playerLevel;
+      if (playerLevel < playerLevelConfig.levelNumber && experience >= playerLevelConfig.experienceToLevelUp) {
+        playerLevel += 1;
+        InputProvider.TriggerOnHasLevelUp(characters[i]);
+        return;
+      }
+    }
+  }
+
 }

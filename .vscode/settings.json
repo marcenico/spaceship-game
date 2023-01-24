@@ -1,4 +1,4 @@
-﻿{
+{
   "csharpfixformat.style.spaces.beforeParenthesis": false,
   "csharp.referencesCodeLens.enabled": false,
   "editor.tabSize": 2,
@@ -53,10 +53,14 @@
     "ProjectSettings/": true,
     "temp/": true,
     "Temp/": true,
+    "UIElementsSchema": true,
+    "Builds": true,
     "Assets/Resources": true,
     "Assets/Scenes": true,
-    "Builds": true,
     "Assets/Prefabs": true,
-    "Assets/Textures": true
+    "Assets/Textures": true,
+    "Assets/Data": true,
+    "Assets/Materials": true,
+    "Assets/TextMesh Pro": true
   }
 }

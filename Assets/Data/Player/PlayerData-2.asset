@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f588e21568c227b458d4beca96f5619f, type: 3}
+  m_Name: PlayerData-2
+  m_EditorClassIdentifier: 
+  life: 150
+  shield: 120
+  speed: 4
+  skin: {fileID: 21300000, guid: 8f723de931d5c0844a5220bcd8d02de4, type: 3}
+  shootPrefab: {fileID: 5478061218403112425, guid: 38eedb1f0e6fd314c9bd3f81e2369a5a,
+    type: 3}
+  shootSpecialPrefab: {fileID: 4055875804976583795, guid: 0e6a7f45faa91584a9f9913352bcd1b1,
+    type: 3}
+  nextFire: 0.5
+  nextFireSpecial: 5
+  experienceOnDead: 10
+  playerLevel:
+    levelNumber: 2
+    experienceToLevelUp: 100
