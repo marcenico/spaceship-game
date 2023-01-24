@@ -48,6 +48,7 @@
      <Compile Include="Assets\Resources\JMO Assets\Cartoon FX\Scripts\CFX_LightIntensityFade.cs" />
      <Compile Include="Assets\Scripts\Behaviours\BoundaryBehaviour.cs" />
      <Compile Include="Assets\Scripts\Behaviours\EnemyBehaviour.cs" />
+     <Compile Include="Assets\Scripts\Behaviours\ItemBehaviour.cs" />
      <Compile Include="Assets\Scripts\Behaviours\PlayerBehaviour.cs" />
      <Compile Include="Assets\Scripts\Behaviours\ProjectileBehaviour.cs" />
      <Compile Include="Assets\Scripts\Controllers\MovementController.cs" />

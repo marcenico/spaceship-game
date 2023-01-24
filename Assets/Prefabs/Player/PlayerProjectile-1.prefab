@@ -23,7 +23,7 @@ GameObject:
   m_Layer: 8
   m_Name: PlayerProjectile-1
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -150,7 +150,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d437d1b6403ca743a14836e6e2a5510, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  config: {fileID: 11400000, guid: 776aba3e58cd79d46ba80e482179a758, type: 2}
+  config: {fileID: 11400000, guid: 81f30301b7e53e940bb6034f2b637201, type: 2}
 --- !u!114 &4688717051462005424
 MonoBehaviour:
   m_ObjectHideFlags: 0

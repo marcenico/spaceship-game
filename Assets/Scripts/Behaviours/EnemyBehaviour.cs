@@ -19,8 +19,11 @@ public class EnemyBehaviour : MonoBehaviour {
     SetConfig();
   }
 
+  private void FixedUpdate() {
+    if (movementController) movementController.DoMovement();
+  }
+
   private void Update() {
-    movementController.DoMovement();
     if (shootController) StartCoroutine(shootController.Shoot());
   }
 
@@ -29,7 +32,7 @@ public class EnemyBehaviour : MonoBehaviour {
   }
 
   private void SetConfig() {
-    if (movementController) movementController.SetConfig(character);
+    if (movementController) movementController.SetSpeed(character.speed);
     if (statsController) statsController.SetConfig(character);
     if (shootController) shootController.SetConfig(character);
     spriteRenderer.sprite = character.skin;

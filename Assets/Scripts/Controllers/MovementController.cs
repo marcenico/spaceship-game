@@ -2,7 +2,7 @@
 
 [RequireComponent(typeof(Rigidbody2D))]
 public class MovementController : MonoBehaviour {
-  public float speed = 10f;
+  private float speed = 10f;
   [HideInInspector] public Vector3 direction;
   [HideInInspector] public Rigidbody2D rigidBody = null;
 
@@ -11,10 +11,11 @@ public class MovementController : MonoBehaviour {
   }
 
   public void DoMovement() {
+    if (rigidBody is null) return;
     rigidBody.velocity = direction * speed * Time.fixedDeltaTime * 100;
   }
 
-  public void SetConfig(Character config) {
-    speed = config.speed;
+  public void SetSpeed(float newSpeed) {
+    speed = newSpeed;
   }
 }
