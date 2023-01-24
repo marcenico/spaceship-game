@@ -15,8 +15,9 @@ public class GameManager : MonoBehaviour {
   }
   #endregion
 
+  [SerializeField] private Character[] characters = null;
   private float experience = 0f;
-  [SerializeField] private PlayerLevel[] playerLevelConfig = null;
+  private int playerLevel = 1;
 
   private void Awake() {
     instance = this;
@@ -29,11 +30,18 @@ public class GameManager : MonoBehaviour {
   }
 
   public void LevelUp() {
-    for (int i = playerLevelConfig.Length - 1; i >= 0; i--) {
-      if (experience >= playerLevelConfig[i].experienceToLevelUp) {
-        InputProvider.TriggerOnHasLevelUp(playerLevelConfig[i].characterConfig);
-        break;
+    for (int i = 0; i < characters.Length; i++) {
+
+      if (characters[i].playerLevel is null) continue;
+
+      PlayerLevel playerLevelConfig = characters[i].playerLevel;
+      if (playerLevel < playerLevelConfig.levelNumber && experience >= playerLevelConfig.experienceToLevelUp) {
+        playerLevel += 1;
+        InputProvider.TriggerOnHasLevelUp(characters[i]);
+        Debug.Log("Iteracion numero " + i);
+        return;
       }
     }
   }
+
 }

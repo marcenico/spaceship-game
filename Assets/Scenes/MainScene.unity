@@ -299,8 +299,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bcd8ed03e14c5443af718d6a250d735, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerLevelConfig:
-  - {fileID: 11400000, guid: 624f3a161d03bce4891e8400992f6186, type: 2}
+  characters:
+  - {fileID: 11400000, guid: 88e9414fb46748947a9c7f2e9243958f, type: 2}
+  - {fileID: 11400000, guid: 4630ac896df161c4786a4a78740cb397, type: 2}
 --- !u!4 &928965137
 Transform:
   m_ObjectHideFlags: 0
