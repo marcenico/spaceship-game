@@ -2,7 +2,7 @@
 
 [RequireComponent(typeof(Rigidbody2D))]
 public class MovementController : MonoBehaviour {
-  [ReadOnly] public float speed = 10f;
+  public float speed = 10f;
   [HideInInspector] public Vector3 direction;
   [HideInInspector] public Rigidbody2D rigidBody = null;
 

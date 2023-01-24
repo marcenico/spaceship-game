@@ -4,8 +4,8 @@ using System.Collections;
 [System.Serializable]
 public class Shoot {
   [HideInInspector] public bool canFire = true;
-  [ReadOnly] public GameObject prefab = null;
-  [ReadOnly] public float nextFire = 1f;
+  public GameObject prefab = null;
+  public float nextFire = 1f;
   public Transform[] spawnProjectilesPoints = null;
 }
 
