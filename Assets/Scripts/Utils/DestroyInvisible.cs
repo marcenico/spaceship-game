@@ -11,12 +11,12 @@ public class DestroyInvisible : MonoBehaviour {
         StartCoroutine(BecameInivisible());
       }
     } else {
-      Destroy(gameObject, waitingTime);
+      Destroy(transform.root.gameObject, waitingTime);
     }
   }
 
   private IEnumerator BecameInivisible() {
     yield return new WaitForSeconds(waitingTime);
-    gameObject.SetActive(false);
+    transform.root.gameObject.SetActive(false);
   }
 }
