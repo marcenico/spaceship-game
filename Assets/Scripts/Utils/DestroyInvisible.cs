@@ -6,17 +6,18 @@ public class DestroyInvisible : MonoBehaviour {
   [SerializeField] private float waitingTime = 0f;
 
   public void OnBecameInvisible() {
+    Debug.Log("hola");
     if (onlyDeactivate) {
       if (gameObject.activeInHierarchy) {
         StartCoroutine(BecameInivisible());
       }
     } else {
-      Destroy(transform.root.gameObject, waitingTime);
+      Destroy(gameObject, waitingTime);
     }
   }
 
   private IEnumerator BecameInivisible() {
     yield return new WaitForSeconds(waitingTime);
-    transform.root.gameObject.SetActive(false);
+    gameObject.SetActive(false);
   }
 }

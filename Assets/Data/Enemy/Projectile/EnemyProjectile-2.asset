@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3dba86a8fa8fbd14b878c368ba47d730, type: 3}
-  m_Name: Projectile-1
+  m_Name: EnemyProjectile-2
   m_EditorClassIdentifier: 
-  speed: 3
-  damage: 20
+  speed: 4
+  damage: 40
