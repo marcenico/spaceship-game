@@ -328,6 +328,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SpawnEnemyController
       objectReference: {fileID: 0}
+    - target: {fileID: 1442374990677204241, guid: a931ddb64918c604797ababde9cd8a58,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1442374990677204242, guid: a931ddb64918c604797ababde9cd8a58,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -382,6 +387,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1442374990677204243, guid: a931ddb64918c604797ababde9cd8a58,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a931ddb64918c604797ababde9cd8a58, type: 3}
@@ -599,6 +609,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1701854908, guid: 9ef40806089a18d4e861f2aa68f97111, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3327499865495934118, guid: 9ef40806089a18d4e861f2aa68f97111,
         type: 3}
       propertyPath: m_Name
