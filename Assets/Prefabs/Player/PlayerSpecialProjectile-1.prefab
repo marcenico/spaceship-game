@@ -23,10 +23,10 @@ GameObject:
   m_Layer: 8
   m_Name: PlayerSpecialProjectile-1
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4055875804976583807
 Transform:
   m_ObjectHideFlags: 0
@@ -150,7 +150,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d437d1b6403ca743a14836e6e2a5510, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  config: {fileID: 11400000, guid: 776aba3e58cd79d46ba80e482179a758, type: 2}
+  config: {fileID: 11400000, guid: f7087a99a5ac07145b7440cdb7f2fb8b, type: 2}
 --- !u!114 &3845244466777322282
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -163,7 +163,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d38f3aa56e144d48bb8177a56cdcdad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
   direction: {x: 0, y: 1, z: 0}
   rigidBody: {fileID: 0}
 --- !u!114 &2611167177796848779
@@ -194,6 +193,17 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 7782673772316168090}
         m_MethodName: DoInstanciate
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 7521354005299749812}
+        m_MethodName: MakeDamage
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

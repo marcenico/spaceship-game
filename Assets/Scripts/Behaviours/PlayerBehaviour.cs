@@ -28,7 +28,7 @@ public class PlayerBehaviour : MonoBehaviour {
   }
 
   private void SetConfig() {
-    if (movementController) movementController.SetConfig(character);
+    if (movementController) movementController.SetSpeed(character.speed);
     if (statsController) statsController.SetConfig(character);
     if (shootController) shootController.SetConfig(character);
     spriteRenderer.sprite = character.skin;

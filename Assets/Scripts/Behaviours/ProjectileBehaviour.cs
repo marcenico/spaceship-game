@@ -12,6 +12,14 @@ public class ProjectileBehaviour : MonoBehaviour {
     triggerDo = GetComponent<OnTriggerDo>();
   }
 
+  private void Start() {
+    SetConfig();
+  }
+
+  private void SetConfig() {
+    if (movementController) movementController.SetSpeed(config.speed);
+  }
+
   private void Update() {
     movementController.DoMovement();
   }

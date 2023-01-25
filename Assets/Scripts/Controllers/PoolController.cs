@@ -42,16 +42,16 @@ public class PoolController : MonoBehaviour {
     GameObject go = null;
     Pool pool = pools.Find(x => x.prefab.name == prefabName);
 
-    List<GameObject> onlyActives = pool.gameObjects.FindAll(x => x.activeInHierarchy);
+    List<GameObject> onlyInactives = pool.gameObjects.FindAll(x => x.activeSelf == false);
 
-    if (onlyActives.Count > 0) {
-      go = onlyActives[onlyActives.Count - 1];
-      onlyActives.RemoveAt(onlyActives.Count - 1);
+    if (onlyInactives.Count > 0) {
+      go = onlyInactives[onlyInactives.Count - 1];
+      onlyInactives.RemoveAt(onlyInactives.Count - 1);
       return go;
     } else {
       go = Instantiate(pool.prefab, Vector3.zero, pool.prefab.transform.rotation);
       go.name = pool.prefab.name;
-      onlyActives.Add(go);
+      onlyInactives.Add(go);
       return go;
     }
   }

@@ -15,12 +15,15 @@ public class EnemyBehaviour : MonoBehaviour {
     movementController = GetComponent<MovementController>();
   }
 
-  private void Start() {
+  private void OnEnable() {
     SetConfig();
   }
 
+  private void FixedUpdate() {
+    if (movementController) movementController.DoMovement();
+  }
+
   private void Update() {
-    movementController.DoMovement();
     if (shootController) StartCoroutine(shootController.Shoot());
   }
 
@@ -29,7 +32,8 @@ public class EnemyBehaviour : MonoBehaviour {
   }
 
   private void SetConfig() {
-    if (movementController) movementController.SetConfig(character);
+    if (movementController) movementController.SetSpeed(character.speed);
+    if (movementController) movementController.SetDirection(new Vector3(0, -1, 0));
     if (statsController) statsController.SetConfig(character);
     if (shootController) shootController.SetConfig(character);
     spriteRenderer.sprite = character.skin;
@@ -40,7 +44,5 @@ public class EnemyBehaviour : MonoBehaviour {
     PoolController.Instance.ReturnOneToPool(gameObject);
   }
 
-  private void OnEnable() {
-    SetConfig();
-  }
+
 }
