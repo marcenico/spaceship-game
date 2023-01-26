@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 
 [RequireComponent(typeof(OnTriggerDo))]
-public class ProjectileBehaviour : MonoBehaviour {
+public class ProjectileBehaviour : MonoBehaviour, IMovable {
   [SerializeField] public Projectile config = null;
   private OnTriggerDo triggerDo = null;
 
@@ -10,7 +10,7 @@ public class ProjectileBehaviour : MonoBehaviour {
   }
 
   private void Update() {
-    transform.position += transform.up * Time.fixedDeltaTime * config.speed;
+    DoMovement();
   }
 
   private void OnDisable() {
@@ -27,5 +27,13 @@ public class ProjectileBehaviour : MonoBehaviour {
         break;
       default: break;
     }
+  }
+
+  public void DoMovement() {
+    transform.position += transform.up * Time.fixedDeltaTime * config.speed;
+  }
+
+  public void DoMovement(Vector3 direction) {
+    throw new System.NotImplementedException();
   }
 }

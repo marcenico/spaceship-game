@@ -1,13 +1,13 @@
 ﻿using UnityEngine;
 
-[RequireComponent(typeof(MovementController))]
-public class ItemBehaviour : MonoBehaviour {
+[RequireComponent(typeof(Rigidbody2D))]
+public class ItemBehaviour : MonoBehaviour, IMovable {
   [SerializeField] private LevelUpItem levelUpItem = null;
   [SerializeField] private SpriteRenderer spriteRenderer = null;
-  private MovementController movementController = null;
+  private Rigidbody2D rigidBody2D = null;
 
   private void Awake() {
-    movementController = GetComponent<MovementController>();
+    rigidBody2D = GetComponent<Rigidbody2D>();
   }
 
   private void OnEnable() {
@@ -16,17 +16,22 @@ public class ItemBehaviour : MonoBehaviour {
 
   private void SetConfig() {
     spriteRenderer.sprite = levelUpItem.skin;
-    if (movementController) {
-      movementController.direction = levelUpItem.directionMovement;
-      movementController.SetSpeed(levelUpItem.speed);
-    }
   }
 
   private void FixedUpdate() {
-    movementController.DoMovement();
+    DoMovement();
   }
 
   public void LevelUpPlayer() {
     InputProvider.TriggerOnHasLevelUp(levelUpItem.character);
+  }
+
+  public void DoMovement() {
+    if (rigidBody2D is null) return;
+    rigidBody2D.velocity = levelUpItem.directionMovement * levelUpItem.speed * Time.fixedDeltaTime * 100;
+  }
+
+  public void DoMovement(Vector3 direction) {
+    throw new System.NotImplementedException();
   }
 }

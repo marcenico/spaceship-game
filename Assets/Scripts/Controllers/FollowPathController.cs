@@ -1,7 +1,7 @@
 using UnityEngine;
 using PathCreation;
 
-public class FollowPathController : MonoBehaviour {
+public class FollowPathController : MonoBehaviour, IMovable {
   public PathCreator pathCreator;
   public EndOfPathInstruction endOfPathInstruction;
   private float distanceTravelled;
@@ -10,7 +10,6 @@ public class FollowPathController : MonoBehaviour {
   [SerializeField] private float rotationSpeed = 1f;
 
   private void Start() {
-    Debug.Log("Start");
     if (pathCreator is null) return;
     oldPosition = transform.position;
     pathCreator.pathUpdated += OnPathChanged;
@@ -19,7 +18,7 @@ public class FollowPathController : MonoBehaviour {
   private void FixedUpdate() {
     if (pathCreator is null) return;
     Vector3 oldPosition = transform.position;
-    Move();
+    DoMovement();
     RotateToDirection(oldPosition, transform.position);
   }
 
@@ -30,11 +29,6 @@ public class FollowPathController : MonoBehaviour {
 
   private void OnDisable() {
     pathCreator.pathUpdated -= OnPathChanged;
-  }
-
-  private void Move() {
-    distanceTravelled += speed * Time.deltaTime;
-    transform.position = pathCreator.path.GetPointAtDistance(distanceTravelled, endOfPathInstruction);
   }
 
   private void RotateToDirection(Vector3 oldPosition, Vector3 newPosition) {
@@ -55,4 +49,12 @@ public class FollowPathController : MonoBehaviour {
     speed = newSpeed;
   }
 
+  public void DoMovement() {
+    distanceTravelled += speed * Time.deltaTime;
+    transform.position = pathCreator.path.GetPointAtDistance(distanceTravelled, endOfPathInstruction);
+  }
+
+  public void DoMovement(Vector3 direction) {
+    throw new System.NotImplementedException();
+  }
 }

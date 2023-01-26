@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 5639899224785868616}
   - component: {fileID: 5210230748087906294}
   - component: {fileID: 5639899224785868617}
-  - component: {fileID: 5639899224785868623}
   - component: {fileID: 1529697462}
   - component: {fileID: 1529697468}
   m_Layer: 13
@@ -88,20 +87,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelUpItem: {fileID: 11400000, guid: 5b2c197e5a353334bae701645abed1e6, type: 2}
   spriteRenderer: {fileID: 867785603029012960}
---- !u!114 &5639899224785868623
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5639899224785868621}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9d38f3aa56e144d48bb8177a56cdcdad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  direction: {x: 0, y: -1, z: 0}
-  rigidBody: {fileID: 0}
 --- !u!114 &1529697462
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -1,18 +1,17 @@
 ﻿using UnityEngine;
-using UnityEngine.Assertions;
 
 [RequireComponent(typeof(StatsController))]
-[RequireComponent(typeof(MovementController))]
-public class PlayerBehaviour : MonoBehaviour {
+[RequireComponent(typeof(Rigidbody2D))]
+public class PlayerBehaviour : MonoBehaviour, IMovable {
   [SerializeField] private Character character = null;
   [SerializeField] private ShootController shootController = null;
   [SerializeField] private SpriteRenderer spriteRenderer = null;
   private StatsController statsController = null;
-  private MovementController movementController = null;
+  private Rigidbody2D rigidBody2D = null;
 
   private void Awake() {
-    movementController = GetComponent<MovementController>();
     statsController = GetComponent<StatsController>();
+    rigidBody2D = GetComponent<Rigidbody2D>();
   }
 
   private void Start() {
@@ -28,17 +27,13 @@ public class PlayerBehaviour : MonoBehaviour {
   }
 
   private void SetConfig() {
-    if (movementController) movementController.SetSpeed(character.speed);
     if (statsController) statsController.SetConfig(character);
     if (shootController) shootController.SetConfig(character);
     spriteRenderer.sprite = character.skin;
   }
 
   private void OnHasMove(Vector3 direction) {
-    Assert.IsNotNull(movementController, message: $"No debe ser nulo {movementController}");
-    transform.position = BoundaryBehaviour.Instance.GetClampPosition(transform.position);
-    movementController.direction = direction;
-    movementController.DoMovement();
+    DoMovement(direction);
   }
 
   private void OnHasShoot() {
@@ -76,5 +71,15 @@ public class PlayerBehaviour : MonoBehaviour {
     InputProvider.OnHasMove -= OnHasMove;
     InputProvider.OnHasShoot -= OnHasShoot;
     InputProvider.OnHasShoot -= OnHasShoot;
+  }
+
+  public void DoMovement() {
+    throw new System.NotImplementedException();
+  }
+
+  public void DoMovement(Vector3 direction) {
+    transform.position = BoundaryBehaviour.Instance.GetClampPosition(transform.position);
+    if (rigidBody2D is null) return;
+    rigidBody2D.velocity = direction * character.speed * Time.fixedDeltaTime * 100;
   }
 }
