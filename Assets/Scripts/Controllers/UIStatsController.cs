@@ -13,6 +13,8 @@ public class UIStatsController : MonoBehaviour {
   }
 
   private void Start() {
+    if (!statsController) return;
+
     OnHasLifeChange(statsController.life.ToString());
     OnHasShieldChange(statsController.shield.ToString());
     StatsTextProvider.OnHasLifeChange += OnHasLifeChange;
