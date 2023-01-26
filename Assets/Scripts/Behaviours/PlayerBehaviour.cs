@@ -37,12 +37,12 @@ public class PlayerBehaviour : MonoBehaviour, IMovable {
   }
 
   private void OnHasShoot() {
-    if (!shootController) return;
+    if (!shootController || !character.shootPrefab) return;
     StartCoroutine(shootController.Shoot());
   }
 
   private void OnHasShootSpecial() {
-    if (!shootController) return;
+    if (!shootController || !character.shootSpecialPrefab) return;
     StartCoroutine(shootController.ShootSpecial());
   }
 
