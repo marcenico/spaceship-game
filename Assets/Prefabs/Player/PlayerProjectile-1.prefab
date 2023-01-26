@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 6812992328244188416}
   - component: {fileID: 7148557249789720768}
   - component: {fileID: 2030439222307168814}
-  - component: {fileID: 4688717051462005424}
   - component: {fileID: 5796164191895440657}
   - component: {fileID: 1751120318880960000}
   - component: {fileID: 4931173024760928660}
@@ -34,13 +33,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5478061218403112425}
-  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &4539462382097554650
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -125,18 +124,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.59834427, y: 0.0031301677}
+  m_Offset: {x: -0.014416084, y: 0.77475435}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.8918917, y: 2.25}
+    oldSize: {x: 2.25, y: 3.8918917}
     newSize: {x: 15.567567, y: 9}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.03026, y: 0.33272892}
+  m_Size: {x: 0.5007143, y: 0.78662574}
   m_EdgeRadius: 0
 --- !u!114 &2030439222307168814
 MonoBehaviour:
@@ -151,20 +150,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   config: {fileID: 11400000, guid: 81f30301b7e53e940bb6034f2b637201, type: 2}
---- !u!114 &4688717051462005424
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5478061218403112425}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9d38f3aa56e144d48bb8177a56cdcdad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  direction: {x: 0, y: 1, z: 0}
-  rigidBody: {fileID: 0}
 --- !u!114 &5796164191895440657
 MonoBehaviour:
   m_ObjectHideFlags: 0

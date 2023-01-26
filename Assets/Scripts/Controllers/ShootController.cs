@@ -12,12 +12,15 @@ public class Shoot {
 public class ShootController : MonoBehaviour, IShootable {
   [SerializeField] private Shoot normalShoot = null;
   [SerializeField] private Shoot shootSpecial = null;
+  private float waitFirstShoot = 0f;
+  private bool isFirstShoot = true;
 
   public void SetConfig(Character config) {
     normalShoot.prefab = config.shootPrefab;
     normalShoot.nextFire = config.nextFire;
     shootSpecial.prefab = config.shootSpecialPrefab;
     shootSpecial.nextFire = config.nextFireSpecial;
+    waitFirstShoot = config.waitFirstShoot;
   }
 
   public IEnumerator Shoot() {
@@ -28,14 +31,20 @@ public class ShootController : MonoBehaviour, IShootable {
       yield break;
     }
 
-    foreach (var spawnPoint in normalShoot.spawnProjectilesPoints) {
-      GameObject go = PoolController.Instance.GetOne(normalShoot.prefab.name);
-      go.transform.position = spawnPoint.position;
-      go.SetActive(true);
+    if (isFirstShoot) {
+      yield return new WaitForSeconds(waitFirstShoot);
+      isFirstShoot = false;
+    } else {
+      foreach (var spawnPoint in normalShoot.spawnProjectilesPoints) {
+        GameObject go = PoolController.Instance.GetOne(normalShoot.prefab.name);
+        go.transform.position = spawnPoint.position;
+        go.transform.rotation = transform.rotation;
+        go.SetActive(true);
+      }
+      normalShoot.canFire = false;
+      yield return new WaitForSeconds(normalShoot.nextFire);
+      normalShoot.canFire = true;
     }
-    normalShoot.canFire = false;
-    yield return new WaitForSeconds(normalShoot.nextFire);
-    normalShoot.canFire = true;
   }
 
   public IEnumerator ShootSpecial() {
@@ -43,6 +52,7 @@ public class ShootController : MonoBehaviour, IShootable {
     foreach (var spawnPoint in shootSpecial.spawnProjectilesPoints) {
       GameObject go = PoolController.Instance.GetOne(shootSpecial.prefab.name);
       go.transform.position = spawnPoint.position;
+      go.transform.rotation = transform.rotation;
       go.SetActive(true);
     }
     shootSpecial.canFire = false;

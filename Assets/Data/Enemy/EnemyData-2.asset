@@ -14,12 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   life: 40
   shield: 0
-  speed: 2
+  speed: 6
   skin: {fileID: 21300000, guid: 77580bdf701eeb2438cbb61fef15ddd1, type: 3}
   shootPrefab: {fileID: 384439728551235471, guid: 3bede00a9b70f884894a7413b1e2e8bc,
     type: 3}
   shootSpecialPrefab: {fileID: 384439728551235471, guid: 3bede00a9b70f884894a7413b1e2e8bc,
     type: 3}
+  waitFirstShoot: 1
   nextFire: 3
   nextFireSpecial: 10
   experienceOnDead: 50

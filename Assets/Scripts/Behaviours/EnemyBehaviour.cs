@@ -1,26 +1,22 @@
 using UnityEngine;
 
 [RequireComponent(typeof(StatsController))]
-[RequireComponent(typeof(MovementController))]
+[RequireComponent(typeof(FollowPathController))]
 public class EnemyBehaviour : MonoBehaviour {
   [SerializeField] public Character character = null;
   [SerializeField] private ShootController shootController = null;
   [SerializeField] private SpriteRenderer spriteRenderer = null;
   private StatsController statsController = null;
-  private MovementController movementController = null;
+  private FollowPathController followPathController = null;
 
 
   private void Awake() {
+    followPathController = GetComponent<FollowPathController>();
     statsController = GetComponent<StatsController>();
-    movementController = GetComponent<MovementController>();
   }
 
   private void OnEnable() {
     SetConfig();
-  }
-
-  private void FixedUpdate() {
-    if (movementController) movementController.DoMovement();
   }
 
   private void Update() {
@@ -32,8 +28,7 @@ public class EnemyBehaviour : MonoBehaviour {
   }
 
   private void SetConfig() {
-    if (movementController) movementController.SetSpeed(character.speed);
-    if (movementController) movementController.SetDirection(new Vector3(0, -1, 0));
+    if (followPathController) followPathController.SetSpeed(character.speed);
     if (statsController) statsController.SetConfig(character);
     if (shootController) shootController.SetConfig(character);
     spriteRenderer.sprite = character.skin;
@@ -43,6 +38,4 @@ public class EnemyBehaviour : MonoBehaviour {
   private void OnDisable() {
     PoolController.Instance.ReturnOneToPool(gameObject);
   }
-
-
 }

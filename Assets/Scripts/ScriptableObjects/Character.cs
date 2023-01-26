@@ -14,6 +14,7 @@ public class Character : ScriptableObject {
   public Sprite skin = null;
   public GameObject shootPrefab = null;
   public GameObject shootSpecialPrefab = null;
+  public float waitFirstShoot = 0f;
   public float nextFire = 0.5f;
   public float nextFireSpecial = 10f;
   public float experienceOnDead = 10f;

@@ -1,27 +1,16 @@
 ﻿using UnityEngine;
 
-[RequireComponent(typeof(MovementController))]
 [RequireComponent(typeof(OnTriggerDo))]
 public class ProjectileBehaviour : MonoBehaviour {
   [SerializeField] public Projectile config = null;
-  private MovementController movementController = null;
   private OnTriggerDo triggerDo = null;
 
   private void Awake() {
-    movementController = GetComponent<MovementController>();
     triggerDo = GetComponent<OnTriggerDo>();
   }
 
-  private void Start() {
-    SetConfig();
-  }
-
-  private void SetConfig() {
-    if (movementController) movementController.SetSpeed(config.speed);
-  }
-
   private void Update() {
-    movementController.DoMovement();
+    transform.position += transform.up * Time.fixedDeltaTime * config.speed;
   }
 
   private void OnDisable() {

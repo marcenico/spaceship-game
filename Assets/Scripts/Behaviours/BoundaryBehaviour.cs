@@ -9,30 +9,40 @@ public class Boundary {
 }
 
 public class BoundaryBehaviour : MonoBehaviour {
-  private Boundary boundary = new Boundary();
-  public static BoundaryBehaviour Instance;
+  #region Singleton Pattern
+  private static BoundaryBehaviour instance;
+
+  public static BoundaryBehaviour Instance {
+    get {
+      if (instance is null) {
+        GameObject go = new GameObject("BoundaryBehaviour");
+        go.AddComponent<GameManager>();
+      }
+      return instance;
+    }
+  }
+  #endregion
+
+  public Boundary boundaries = new Boundary();
 
   private void Awake() {
-    if (Instance != null) {
-      Destroy(gameObject);
-      return;
-    }
-    Instance = this;
+    instance = this;
     BoundaryProvider.OnGetBoundaries += OnGetBoundaries;
   }
+
 
   private void OnGetBoundaries() {
     Vector3 lowerLeft = Camera.main.ScreenToWorldPoint(new Vector3(0, 0, 0));
     Vector3 upperRight = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, 0));
-    boundary.left = lowerLeft.x + 1.4f;
-    boundary.right = upperRight.x - 1.4f;
-    boundary.top = upperRight.y - 1.4f;
-    boundary.bottom = lowerLeft.y + 1.4f;
+    boundaries.left = lowerLeft.x + 1.4f;
+    boundaries.right = upperRight.x - 1.4f;
+    boundaries.top = upperRight.y - 1.4f;
+    boundaries.bottom = lowerLeft.y + 1.4f;
   }
 
   public Vector3 GetClampPosition(Vector3 position) {
-    float x = Mathf.Clamp(position.x, boundary.left, boundary.right);
-    float y = Mathf.Clamp(position.y, boundary.bottom, boundary.top);
+    float x = Mathf.Clamp(position.x, boundaries.left, boundaries.right);
+    float y = Mathf.Clamp(position.y, boundaries.bottom, boundaries.top);
     return new Vector3(x, y);
   }
 

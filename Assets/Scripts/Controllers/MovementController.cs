@@ -15,10 +15,6 @@ public class MovementController : MonoBehaviour {
     rigidBody.velocity = direction * speed * Time.fixedDeltaTime * 100;
   }
 
-  public void SetDirection(Vector3 newDirection) {
-    direction = newDirection;
-  }
-
   public void SetSpeed(float newSpeed) {
     speed = newSpeed;
   }

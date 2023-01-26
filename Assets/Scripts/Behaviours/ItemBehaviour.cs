@@ -10,10 +10,6 @@ public class ItemBehaviour : MonoBehaviour {
     movementController = GetComponent<MovementController>();
   }
 
-  private void FixedUpdate() {
-    movementController.DoMovement();
-  }
-
   private void OnEnable() {
     SetConfig();
   }
@@ -21,9 +17,13 @@ public class ItemBehaviour : MonoBehaviour {
   private void SetConfig() {
     spriteRenderer.sprite = levelUpItem.skin;
     if (movementController) {
-      movementController.SetDirection(levelUpItem.directionMovement);
+      movementController.direction = levelUpItem.directionMovement;
       movementController.SetSpeed(levelUpItem.speed);
     }
+  }
+
+  private void FixedUpdate() {
+    movementController.DoMovement();
   }
 
   public void LevelUpPlayer() {
