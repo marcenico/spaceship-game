@@ -11,6 +11,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1935526223691691122}
   - component: {fileID: 1935526223691691121}
+  - component: {fileID: 8705773343878201960}
   m_Layer: 0
   m_Name: BoundaryBehaviour
   m_TagString: Untagged
@@ -44,5 +45,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ca51c09f5feab934e82795c1fbb0cd9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boundaries:
+    left: 0
+    right: 0
+    top: 0
+    bottom: 0
+--- !u!114 &8705773343878201960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1935526223691691123}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cad2509ec010c440a681caade8a0398, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

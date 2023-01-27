@@ -16,7 +16,8 @@ public class BoundaryBehaviour : MonoBehaviour {
     get {
       if (instance is null) {
         GameObject go = new GameObject("BoundaryBehaviour");
-        go.AddComponent<GameManager>();
+        go.AddComponent<BoundaryBehaviour>();
+        go.AddComponent<WindowResizeListener>();
       }
       return instance;
     }
