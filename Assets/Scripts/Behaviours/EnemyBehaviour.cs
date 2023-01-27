@@ -2,17 +2,20 @@ using UnityEngine;
 
 [RequireComponent(typeof(StatsController))]
 [RequireComponent(typeof(FollowPathController))]
+[RequireComponent(typeof(OnTriggerDo))]
 public class EnemyBehaviour : MonoBehaviour {
   [SerializeField] public Character character = null;
   [SerializeField] private ShootController shootController = null;
   [SerializeField] private SpriteRenderer spriteRenderer = null;
   private StatsController statsController = null;
   private FollowPathController followPathController = null;
+  private OnTriggerDo triggerDo = null;
 
 
   private void Awake() {
     followPathController = GetComponent<FollowPathController>();
     statsController = GetComponent<StatsController>();
+    triggerDo = GetComponent<OnTriggerDo>();
   }
 
   private void OnEnable() {
@@ -21,6 +24,12 @@ public class EnemyBehaviour : MonoBehaviour {
 
   private void Update() {
     if (shootController) StartCoroutine(shootController.Shoot());
+  }
+
+  public void MakeDamage() {
+    if (triggerDo.statsTarget == null) return;
+    InputProvider.TriggerOnHasDamage(character.damageOnTrigger);
+    triggerDo.statsTarget = null;
   }
 
   public void GiveExperience() {
@@ -33,7 +42,6 @@ public class EnemyBehaviour : MonoBehaviour {
     if (shootController) shootController.SetConfig(character);
     spriteRenderer.sprite = character.skin;
   }
-
 
   private void OnDisable() {
     PoolController.Instance.ReturnOneToPool(gameObject);

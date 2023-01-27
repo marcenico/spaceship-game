@@ -227,6 +227,7 @@ GameObject:
   - component: {fileID: 2197924633482761215}
   - component: {fileID: 2495080684397079420}
   - component: {fileID: 2305584194081727528}
+  - component: {fileID: -7021663975729167512}
   - component: {fileID: 1966572634544363839}
   - component: {fileID: 5083657225623611854}
   - component: {fileID: 2111914767179781258}
@@ -299,11 +300,11 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -0.049102724, y: -0.010894101}
-      - {x: 0.00068616343, y: 0.037418067}
-      - {x: 0.048145283, y: -0.011375193}
-      - {x: 0.018205665, y: -0.043010805}
-      - {x: -0.017922422, y: -0.042558506}
+    - - {x: -0.06864558, y: -0.013685937}
+      - {x: -0.00043057336, y: 0.068686664}
+      - {x: 0.06880487, y: -0.013050299}
+      - {x: 0.02099749, y: -0.05696998}
+      - {x: -0.023506071, y: -0.05707606}
 --- !u!114 &2197924633482761215
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -349,6 +350,55 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   life: 100
   shield: 100
+--- !u!114 &-7021663975729167512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4554290649193326102}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 222a3803494db3449b7e4261672ab129, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  action:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2197924633482761215}
+        m_MethodName: MakeDamage
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 5083657225623611854}
+        m_MethodName: DoDestroy
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2111914767179781258}
+        m_MethodName: DoInstanciate
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  statsTarget: {fileID: 0}
 --- !u!114 &1966572634544363839
 MonoBehaviour:
   m_ObjectHideFlags: 0
