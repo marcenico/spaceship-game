@@ -24,11 +24,20 @@ public class ScenarioWalls : MonoBehaviour {
   }
 
   private void ScaleWalls() {
-    double width = cameraMain.orthographicSize * 2.0 * Screen.width / Screen.height;
-    double height = cameraMain.orthographicSize * 2.0;
+    double width = cameraMain.orthographicSize * 3.0 * Screen.width / Screen.height;
+    double height = cameraMain.orthographicSize * 4.0;
     wallBottom.transform.localScale = new Vector3(0.1f, (float)width, 0.1f);
     wallTop.transform.localScale = new Vector3(0.1f, (float)width, 0.1f);
     wallLeft.transform.localScale = new Vector3(0.1f, (float)height, 0.1f);
     wallRight.transform.localScale = new Vector3(0.1f, (float)height, 0.1f);
+  }
+
+  /// <summary>
+  /// Sent when another object enters a trigger collider attached to this
+  /// object (2D physics only).
+  /// </summary>
+  /// <param name="other">The other Collider2D involved in this collision.</param>
+  void OnTriggerEnter2D(Collider2D other) {
+    Debug.Log(other);
   }
 }

@@ -22,12 +22,16 @@ public class EnemyBehaviour : MonoBehaviour {
     SetConfig();
   }
 
+  private void OnDisable() {
+    PoolController.Instance.ReturnOneToPool(gameObject);
+  }
+
   private void Update() {
     if (shootController) StartCoroutine(shootController.Shoot());
   }
 
   public void MakeDamage() {
-    if (triggerDo.statsTarget == null) return;
+    if (triggerDo is null || triggerDo.gameObjectTag != "Player") return;
     InputProvider.TriggerOnHasDamage(character.damageOnTrigger);
     triggerDo.statsTarget = null;
   }
@@ -43,7 +47,5 @@ public class EnemyBehaviour : MonoBehaviour {
     spriteRenderer.sprite = character.skin;
   }
 
-  private void OnDisable() {
-    PoolController.Instance.ReturnOneToPool(gameObject);
-  }
+
 }

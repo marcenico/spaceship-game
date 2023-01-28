@@ -1,13 +1,20 @@
 using UnityEngine;
 using PathCreation;
+using System.Collections.Generic;
 
 public class FollowPathController : MonoBehaviour, IMovable {
-  public PathCreator pathCreator;
+  public List<PathCreator> possiblePaths = new List<PathCreator>();
   public EndOfPathInstruction endOfPathInstruction;
+  private PathCreator pathCreator = null;
   private float distanceTravelled;
   private Vector3 oldPosition = Vector3.zero;
   private float speed = 1f;
   [SerializeField] private float rotationSpeed = 1f;
+
+  private void Awake() {
+    if (possiblePaths == null || possiblePaths.Count == 0) return;
+    pathCreator = possiblePaths[(Random.Range(0, possiblePaths.Count))];
+  }
 
   private void Start() {
     if (pathCreator is null) return;

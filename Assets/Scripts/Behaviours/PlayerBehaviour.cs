@@ -2,16 +2,19 @@
 
 [RequireComponent(typeof(StatsController))]
 [RequireComponent(typeof(Rigidbody2D))]
+[RequireComponent(typeof(OnTriggerDo))]
 public class PlayerBehaviour : MonoBehaviour, IMovable {
   [SerializeField] private Character character = null;
   [SerializeField] private ShootController shootController = null;
   [SerializeField] private SpriteRenderer spriteRenderer = null;
   private StatsController statsController = null;
   private Rigidbody2D rigidBody2D = null;
+  private OnTriggerDo triggerDo = null;
 
   private void Awake() {
     statsController = GetComponent<StatsController>();
     rigidBody2D = GetComponent<Rigidbody2D>();
+    triggerDo = GetComponent<OnTriggerDo>();
   }
 
   private void Start() {
@@ -24,6 +27,13 @@ public class PlayerBehaviour : MonoBehaviour, IMovable {
   }
 
   public void OnDefeat() {
+    Debug.LogWarning("Not implemented yet");
+  }
+
+  public void MakeDamage() {
+    if (triggerDo is null || triggerDo.gameObjectTag != "Enemy") return;
+    triggerDo.statsTarget.TakeLife(character.damageOnTrigger);
+    triggerDo.statsTarget = null;
   }
 
   private void SetConfig() {
@@ -70,7 +80,9 @@ public class PlayerBehaviour : MonoBehaviour, IMovable {
   private void UnsuscribeEvents() {
     InputProvider.OnHasMove -= OnHasMove;
     InputProvider.OnHasShoot -= OnHasShoot;
-    InputProvider.OnHasShoot -= OnHasShoot;
+    InputProvider.OnHasShootSpecial += OnHasShootSpecial;
+    InputProvider.OnHasDamage += OnHasDamage;
+    InputProvider.OnHasLevelUp += OnHasLevelUp;
   }
 
   public void DoMovement() {

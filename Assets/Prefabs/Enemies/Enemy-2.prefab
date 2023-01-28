@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8010894019989334596}
   - component: {fileID: 4797660657464965596}
-  - component: {fileID: 7332161857308004473}
   m_Layer: 10
   m_Name: Skin
   m_TagString: Untagged
@@ -82,20 +81,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &7332161857308004473
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 863707883320329176}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2fa25c657ea219c478d0ae1e5d0e4e0c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  onlyDeactivate: 1
-  waitingTime: 1
 --- !u!1 &3585185525506249958
 GameObject:
   m_ObjectHideFlags: 0
@@ -332,9 +317,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df9f3498287427d41a7d1323dc845d68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pathCreator: {fileID: 2004855166036672312, guid: 1747286ef0b127b43916557975a2cacd,
-    type: 3}
-  endOfPathInstruction: 0
+  possiblePaths:
+  - {fileID: 2004855166036672312, guid: 1747286ef0b127b43916557975a2cacd, type: 3}
+  endOfPathInstruction: 2
   rotationSpeed: 1
 --- !u!114 &2305584194081727528
 MonoBehaviour:
@@ -399,6 +384,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   statsTarget: {fileID: 0}
+  gameObjectTag: 
 --- !u!114 &1966572634544363839
 MonoBehaviour:
   m_ObjectHideFlags: 0

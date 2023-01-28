@@ -285,9 +285,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df9f3498287427d41a7d1323dc845d68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pathCreator: {fileID: 2004855166036672312, guid: 1747286ef0b127b43916557975a2cacd,
-    type: 3}
-  endOfPathInstruction: 0
+  possiblePaths:
+  - {fileID: 2004855166036672312, guid: 1747286ef0b127b43916557975a2cacd, type: 3}
+  - {fileID: 2504027823870588173, guid: 3dfe36a5b8ee1b64394884fd7456fe81, type: 3}
+  endOfPathInstruction: 2
   rotationSpeed: 1
 --- !u!114 &819430441270535355
 MonoBehaviour:
@@ -352,6 +353,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   statsTarget: {fileID: 0}
+  gameObjectTag: 
 --- !u!114 &167659966923023022
 MonoBehaviour:
   m_ObjectHideFlags: 0

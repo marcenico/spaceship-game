@@ -30,8 +30,9 @@ public class GameManager : MonoBehaviour {
   }
 
   public void LevelUp() {
-    for (int i = 0; i < characters.Length; i++) {
+    if (characters is null) return;
 
+    for (int i = 0; i < characters.Length; i++) {
       if (characters[i].playerLevel is null) continue;
 
       PlayerLevel playerLevelConfig = characters[i].playerLevel;

@@ -24,6 +24,7 @@ MonoBehaviour:
   nextFire: 0.3
   nextFireSpecial: 5
   experienceOnDead: 10
+  damageOnTrigger: 1000
   playerLevel:
     levelNumber: 2
     experienceToLevelUp: 100

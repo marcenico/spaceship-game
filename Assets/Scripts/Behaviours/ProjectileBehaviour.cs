@@ -18,6 +18,8 @@ public class ProjectileBehaviour : MonoBehaviour, IMovable {
   }
 
   public void MakeDamage() {
+    if (triggerDo is null || triggerDo.gameObjectTag == "Wall") return;
+
     switch (gameObject.layer) {
       case 11: // Proyectil enemigo
         InputProvider.TriggerOnHasDamage(config.damage);

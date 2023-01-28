@@ -74,6 +74,7 @@ GameObject:
   - component: {fileID: 5723821708934876058}
   - component: {fileID: 2345477762929659046}
   - component: {fileID: 786148145468796629}
+  - component: {fileID: 4624267605572327512}
   - component: {fileID: 8775696021900138177}
   - component: {fileID: 6186131407980106843}
   m_Layer: 9
@@ -82,7 +83,7 @@ GameObject:
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1077824905912712916
 Transform:
   m_ObjectHideFlags: 0
@@ -229,6 +230,34 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &4624267605572327512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1077824905912712917}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 222a3803494db3449b7e4261672ab129, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  action:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5723821708934876058}
+        m_MethodName: MakeDamage
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  statsTarget: {fileID: 0}
+  gameObjectTag: 
 --- !u!114 &8775696021900138177
 MonoBehaviour:
   m_ObjectHideFlags: 0
