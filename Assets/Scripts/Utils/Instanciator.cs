@@ -10,7 +10,7 @@ public class Instanciator : MonoBehaviour {
   }
 
   public void DoInstanciate() {
-    if (triggerDo is null || triggerDo.gameObjectTag == "Wall") return;
+    if (triggerDo.otherCollider && triggerDo.otherCollider.tag == "Wall") return;
     Instantiate(prefab, transform.position, transform.rotation);
   }
 }

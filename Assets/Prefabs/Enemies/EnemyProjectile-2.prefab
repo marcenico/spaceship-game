@@ -16,7 +16,6 @@ GameObject:
   - component: {fileID: 5281157640036101961}
   - component: {fileID: 279454781175507297}
   - component: {fileID: 31661225259582542}
-  - component: {fileID: 2373498666207966675}
   - component: {fileID: 7559137653217649212}
   m_Layer: 11
   m_Name: EnemyProjectile-2
@@ -198,7 +197,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   statsTarget: {fileID: 0}
-  gameObjectTag: 
+  colliderGameObject: {fileID: 0}
 --- !u!114 &279454781175507297
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -225,20 +224,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   onlyDeactivate: 1
---- !u!114 &2373498666207966675
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 384439728551235471}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9df9af0821d32f44991410c8394b1998, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  onlyDeactivate: 1
-  timeOfLive: 4
 --- !u!82 &7559137653217649212
 AudioSource:
   m_ObjectHideFlags: 0

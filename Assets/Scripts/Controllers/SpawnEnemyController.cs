@@ -24,7 +24,7 @@ public class SpawnEnemyController : MonoBehaviour {
   }
 
   private void SetPositionToSpawn() {
-    float positionY = BoundaryBehaviour.Instance.boundaries.top * 2f;
+    float positionY = BoundaryBehaviour.Instance.boundaries.top * 1.5f;
     positionToSpawn = new Vector3(0, positionY, 0);
   }
 

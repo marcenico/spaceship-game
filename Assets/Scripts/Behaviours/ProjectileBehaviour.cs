@@ -18,7 +18,7 @@ public class ProjectileBehaviour : MonoBehaviour, IMovable {
   }
 
   public void MakeDamage() {
-    if (triggerDo is null || triggerDo.gameObjectTag == "Wall") return;
+    if (triggerDo.otherCollider.tag == "Wall") return;
 
     switch (gameObject.layer) {
       case 11: // Proyectil enemigo

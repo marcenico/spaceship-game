@@ -17,9 +17,9 @@ public class ScenarioWalls : MonoBehaviour {
   }
 
   private void SetWallsPositions() {
-    wallLeft.transform.position = cameraMain.ViewportToWorldPoint(new Vector2(-0.2f, 0.5f));
-    wallRight.transform.position = cameraMain.ViewportToWorldPoint(new Vector2(1.2f, 0.5f));
-    wallTop.transform.position = cameraMain.ViewportToWorldPoint(new Vector2(0.5f, 1.2f));
+    wallLeft.transform.position = cameraMain.ViewportToWorldPoint(new Vector2(-0.1f, 0.5f));
+    wallRight.transform.position = cameraMain.ViewportToWorldPoint(new Vector2(1.1f, 0.5f));
+    wallTop.transform.position = cameraMain.ViewportToWorldPoint(new Vector2(0.5f, 1.5f));
     wallBottom.transform.position = cameraMain.ViewportToWorldPoint(new Vector2(0.5f, -0.2f));
   }
 
@@ -32,12 +32,9 @@ public class ScenarioWalls : MonoBehaviour {
     wallRight.transform.localScale = new Vector3(0.1f, (float)height, 0.1f);
   }
 
-  /// <summary>
-  /// Sent when another object enters a trigger collider attached to this
-  /// object (2D physics only).
-  /// </summary>
-  /// <param name="other">The other Collider2D involved in this collision.</param>
-  void OnTriggerEnter2D(Collider2D other) {
-    Debug.Log(other);
+  /// <summary>Oculto los objetos que choquen con las paredes</summary>
+  private void OnTriggerEnter2D(Collider2D other) {
+    other.gameObject.SetActive(false);
   }
+
 }

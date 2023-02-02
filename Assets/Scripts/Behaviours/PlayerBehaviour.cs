@@ -31,9 +31,8 @@ public class PlayerBehaviour : MonoBehaviour, IMovable {
   }
 
   public void MakeDamage() {
-    if (triggerDo is null || triggerDo.gameObjectTag != "Enemy") return;
+    if (triggerDo.otherCollider.tag != "Enemy") return;
     triggerDo.statsTarget.TakeLife(character.damageOnTrigger);
-    triggerDo.statsTarget = null;
   }
 
   private void SetConfig() {

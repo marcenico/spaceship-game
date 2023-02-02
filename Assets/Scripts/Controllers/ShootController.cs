@@ -21,6 +21,7 @@ public class ShootController : MonoBehaviour, IShootable {
     shootSpecial.prefab = config.shootSpecialPrefab;
     shootSpecial.nextFire = config.nextFireSpecial;
     waitFirstShoot = config.waitFirstShoot;
+    isFirstShoot = true;
   }
 
   public IEnumerator Shoot() {
@@ -58,5 +59,9 @@ public class ShootController : MonoBehaviour, IShootable {
     shootSpecial.canFire = false;
     yield return new WaitForSeconds(shootSpecial.nextFire);
     shootSpecial.canFire = true;
+  }
+
+  private void OnDisable() {
+    normalShoot.canFire = true;
   }
 }

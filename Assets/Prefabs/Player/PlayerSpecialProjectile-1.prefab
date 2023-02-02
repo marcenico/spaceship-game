@@ -16,8 +16,6 @@ GameObject:
   - component: {fileID: 2611167177796848779}
   - component: {fileID: 7782673772316168090}
   - component: {fileID: 3468806990894258190}
-  - component: {fileID: 4733689125620210685}
-  - component: {fileID: 4041304040334698894}
   - component: {fileID: 9198787256522268031}
   m_Layer: 8
   m_Name: PlayerSpecialProjectile-1
@@ -199,7 +197,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   statsTarget: {fileID: 0}
-  gameObjectTag: 
+  colliderGameObject: {fileID: 0}
 --- !u!114 &7782673772316168090
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -226,34 +224,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   onlyDeactivate: 1
---- !u!114 &4733689125620210685
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4055875804976583795}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2fa25c657ea219c478d0ae1e5d0e4e0c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  onlyDeactivate: 1
-  waitingTime: 1
---- !u!114 &4041304040334698894
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4055875804976583795}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9df9af0821d32f44991410c8394b1998, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  onlyDeactivate: 1
-  timeOfLive: 2
 --- !u!82 &9198787256522268031
 AudioSource:
   m_ObjectHideFlags: 0

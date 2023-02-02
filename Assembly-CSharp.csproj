@@ -78,6 +78,7 @@
      <Compile Include="Assets\Scripts\ScriptableObjects\Projectile.cs" />
      <Compile Include="Assets\Scripts\Utils\AutoDestroyObject.cs" />
      <Compile Include="Assets\Scripts\Utils\AutoScroller.cs" />
+     <Compile Include="Assets\Scripts\Utils\BaseCustomUnityEventDrawer.cs" />
      <Compile Include="Assets\Scripts\Utils\DestroyInvisible.cs" />
      <Compile Include="Assets\Scripts\Utils\DestroyObject.cs" />
      <Compile Include="Assets\Scripts\Utils\Instanciator.cs" />
