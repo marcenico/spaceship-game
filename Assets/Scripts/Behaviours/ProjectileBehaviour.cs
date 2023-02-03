@@ -9,7 +9,7 @@ public class ProjectileBehaviour : MonoBehaviour, IMovable {
     triggerDo = GetComponent<OnTriggerDo>();
   }
 
-  private void Update() {
+  private void FixedUpdate() {
     DoMovement();
   }
 
@@ -32,7 +32,7 @@ public class ProjectileBehaviour : MonoBehaviour, IMovable {
   }
 
   public void DoMovement() {
-    transform.position += transform.up * Time.fixedDeltaTime * config.speed;
+    transform.position += transform.up * Time.fixedDeltaTime * config.speed * 5f;
   }
 
   public void DoMovement(Vector3 direction) {
