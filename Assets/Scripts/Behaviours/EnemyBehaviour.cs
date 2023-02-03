@@ -28,7 +28,7 @@ public class EnemyBehaviour : MonoBehaviour {
   }
 
   private void Update() {
-    if (shootController && spriteRenderer.isVisible) StartCoroutine(shootController.Shoot());
+    if (character.canFire && shootController && spriteRenderer.isVisible) StartCoroutine(shootController.Shoot());
   }
 
   public void MakeDamage() {
