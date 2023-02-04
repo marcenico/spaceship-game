@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 779707121670846739}
   - component: {fileID: 667300671682778172}
   - component: {fileID: 7049737049554367054}
+  - component: {fileID: 7766299997371708150}
   m_Layer: 11
   m_Name: EnemyProjectile-1
   m_TagString: Untagged
@@ -197,7 +198,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   statsTarget: {fileID: 0}
-  colliderGameObject: {fileID: 0}
+  otherCollider: {fileID: 0}
 --- !u!114 &779707121670846739
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -320,3 +321,17 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &7766299997371708150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 893696515293339645}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fa25c657ea219c478d0ae1e5d0e4e0c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onlyDeactivate: 1
+  waitingTime: 0.5

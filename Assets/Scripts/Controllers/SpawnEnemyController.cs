@@ -13,6 +13,16 @@ public class SpawnEnemyController : MonoBehaviour {
     StartCoroutine(SpawnCoroutine());
   }
 
+  private void OnDisable() {
+    StopAllCoroutines();
+  }
+
+  private void OnDestroy() {
+    StopAllCoroutines();
+
+
+  }
+
   private IEnumerator SpawnCoroutine() {
 
     yield return new WaitForSeconds(initialWaitTime);

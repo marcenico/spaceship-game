@@ -27,6 +27,11 @@ public class EnemyBehaviour : MonoBehaviour {
     PoolController.Instance.ReturnOneToPool(gameObject);
   }
 
+  private void OnDestroy() {
+    StopCoroutine(shootController.Shoot());
+    PoolController.Instance.ReturnOneToPool(gameObject);
+  }
+
   private void Update() {
     if (character.canFire && shootController && spriteRenderer.isVisible) StartCoroutine(shootController.Shoot());
   }

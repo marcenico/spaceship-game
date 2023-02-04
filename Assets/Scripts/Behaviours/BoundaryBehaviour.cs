@@ -35,10 +35,10 @@ public class BoundaryBehaviour : MonoBehaviour {
   private void OnGetBoundaries() {
     Vector3 lowerLeft = Camera.main.ScreenToWorldPoint(new Vector3(0, 0, 0));
     Vector3 upperRight = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, 0));
-    boundaries.left = lowerLeft.x + 1.4f;
-    boundaries.right = upperRight.x - 1.4f;
-    boundaries.top = upperRight.y - 1.4f;
-    boundaries.bottom = lowerLeft.y + 1.4f;
+    boundaries.left = lowerLeft.x + 1f;
+    boundaries.right = upperRight.x - 1f;
+    boundaries.top = upperRight.y - 1f;
+    boundaries.bottom = lowerLeft.y + 1f;
   }
 
   public Vector3 GetClampPosition(Vector3 position) {

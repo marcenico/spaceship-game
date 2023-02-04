@@ -69,10 +69,12 @@ public class PlayerBehaviour : MonoBehaviour, IMovable {
   }
 
   private void OnDestroy() {
+    StopAllCoroutines();
     UnsuscribeEvents();
   }
 
   private void OnDisable() {
+    StopAllCoroutines();
     UnsuscribeEvents();
   }
 

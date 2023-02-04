@@ -9,6 +9,16 @@ public class AutoDestroyObject : MonoBehaviour {
     StartCoroutine(CheckIfAlive());
   }
 
+  private void OnDisable() {
+    StopAllCoroutines();
+  }
+
+  private void OnDestroy() {
+    StopAllCoroutines();
+  }
+
+
+
   private IEnumerator CheckIfAlive() {
     yield return new WaitForSeconds(timeOfLive);
     if (!gameObject.activeInHierarchy) yield break;

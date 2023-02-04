@@ -46,7 +46,6 @@ MonoBehaviour:
   enemies:
   - {fileID: 3140187658767066757, guid: 2dcaf036a1ea38c4d84ad5b4c68bc31d, type: 3}
   - {fileID: 4554290649193326102, guid: a003df76c4f3e704cb46740d0a3319cb, type: 3}
-  spawnPosition: {x: 15, y: 10, z: 0}
   initialWaitTime: 1
-  spawnCadence: 2.5
+  spawnCadence: 0.5
   amountToSpawn: 25
