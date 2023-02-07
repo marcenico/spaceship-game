@@ -11,6 +11,7 @@ public class Pool {
 public class PoolController : MonoBehaviour {
   public static PoolController Instance;
   public List<Pool> pools = new List<Pool>();
+  private Vector3 positionToSpawn = Vector3.zero;
 
   private void Awake() {
     if (Instance != null) {
@@ -18,14 +19,20 @@ public class PoolController : MonoBehaviour {
       return;
     }
     Instance = this;
+    SetPositionToSpawn();
     FillPools();
+  }
+
+  private void SetPositionToSpawn() {
+    float positionY = BoundaryBehaviour.Instance.boundaries.top * 1.5f;
+    positionToSpawn = new Vector3(0, positionY, 0);
   }
 
   private void FillPools() {
     foreach (Pool pool in pools) {
       for (int i = 0; i < pool.initialSizeValue; i++) {
         if (!pool.prefab) continue;
-        GameObject go = Instantiate(pool.prefab, Vector3.zero, pool.prefab.transform.rotation);
+        GameObject go = Instantiate(pool.prefab, positionToSpawn, pool.prefab.transform.rotation);
         go.name = pool.prefab.name;
         go.SetActive(false);
         pool.gameObjects.Add(go);
@@ -49,7 +56,7 @@ public class PoolController : MonoBehaviour {
       onlyInactives.RemoveAt(onlyInactives.Count - 1);
       return go;
     } else {
-      go = Instantiate(pool.prefab, Vector3.zero, pool.prefab.transform.rotation);
+      go = Instantiate(pool.prefab, positionToSpawn, pool.prefab.transform.rotation);
       go.name = pool.prefab.name;
       onlyInactives.Add(go);
       return go;

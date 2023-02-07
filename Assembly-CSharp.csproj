@@ -57,10 +57,10 @@
      <Compile Include="Assets\Scripts\Behaviours\ItemBehaviour.cs" />
      <Compile Include="Assets\Scripts\Behaviours\PlayerBehaviour.cs" />
      <Compile Include="Assets\Scripts\Behaviours\ProjectileBehaviour.cs" />
+     <Compile Include="Assets\Scripts\Behaviours\WaveBehaviour.cs" />
      <Compile Include="Assets\Scripts\Controllers\FollowPathController.cs" />
      <Compile Include="Assets\Scripts\Controllers\PoolController.cs" />
      <Compile Include="Assets\Scripts\Controllers\ShootController.cs" />
-     <Compile Include="Assets\Scripts\Controllers\SpawnEnemyController.cs" />
      <Compile Include="Assets\Scripts\Controllers\StatsController.cs" />
      <Compile Include="Assets\Scripts\Controllers\UIStatsController.cs" />
      <Compile Include="Assets\Scripts\Extension\Vector3Extension.cs" />
@@ -70,12 +70,14 @@
      <Compile Include="Assets\Scripts\Listeners\InputKeyboardListener.cs" />
      <Compile Include="Assets\Scripts\Listeners\WindowResizeListener.cs" />
      <Compile Include="Assets\Scripts\Managers\GameManager.cs" />
+     <Compile Include="Assets\Scripts\Managers\WaveManager2.cs" />
      <Compile Include="Assets\Scripts\Providers\BoundaryProvider.cs" />
      <Compile Include="Assets\Scripts\Providers\InputProvider.cs" />
      <Compile Include="Assets\Scripts\Providers\StatsTextProvider.cs" />
      <Compile Include="Assets\Scripts\ScriptableObjects\Character.cs" />
      <Compile Include="Assets\Scripts\ScriptableObjects\LevelUpItem.cs" />
      <Compile Include="Assets\Scripts\ScriptableObjects\Projectile.cs" />
+     <Compile Include="Assets\Scripts\ScriptableObjects\Wave.cs" />
      <Compile Include="Assets\Scripts\Utils\AutoDestroyObject.cs" />
      <Compile Include="Assets\Scripts\Utils\AutoScroller.cs" />
      <Compile Include="Assets\Scripts\Utils\BaseCustomUnityEventDrawer.cs" />

@@ -16,8 +16,8 @@ GameObject:
   - component: {fileID: 2611167177796848779}
   - component: {fileID: 7782673772316168090}
   - component: {fileID: 3468806990894258190}
-  - component: {fileID: 9198787256522268031}
   - component: {fileID: -4432345512172253222}
+  - component: {fileID: 9198787256522268031}
   m_Layer: 8
   m_Name: PlayerSpecialProjectile-1
   m_TagString: Untagged
@@ -225,6 +225,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   onlyDeactivate: 1
+--- !u!114 &-4432345512172253222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4055875804976583795}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fa25c657ea219c478d0ae1e5d0e4e0c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onlyDeactivate: 1
+  waitingTime: 0
 --- !u!82 &9198787256522268031
 AudioSource:
   m_ObjectHideFlags: 0
@@ -321,17 +335,3 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &-4432345512172253222
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4055875804976583795}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2fa25c657ea219c478d0ae1e5d0e4e0c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  onlyDeactivate: 1
-  waitingTime: 1

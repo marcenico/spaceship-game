@@ -16,8 +16,8 @@ GameObject:
   - component: {fileID: 5281157640036101961}
   - component: {fileID: 279454781175507297}
   - component: {fileID: 31661225259582542}
-  - component: {fileID: 7559137653217649212}
   - component: {fileID: -6364910305013122734}
+  - component: {fileID: 7559137653217649212}
   m_Layer: 11
   m_Name: EnemyProjectile-2
   m_TagString: Untagged
@@ -225,6 +225,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   onlyDeactivate: 1
+--- !u!114 &-6364910305013122734
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 384439728551235471}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fa25c657ea219c478d0ae1e5d0e4e0c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onlyDeactivate: 1
+  waitingTime: 0.5
 --- !u!82 &7559137653217649212
 AudioSource:
   m_ObjectHideFlags: 0
@@ -321,17 +335,3 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &-6364910305013122734
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 384439728551235471}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2fa25c657ea219c478d0ae1e5d0e4e0c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  onlyDeactivate: 1
-  waitingTime: 0.5
