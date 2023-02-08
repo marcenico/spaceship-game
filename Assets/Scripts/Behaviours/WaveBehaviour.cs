@@ -19,17 +19,19 @@ public class WaveBehaviour : MonoBehaviour {
 
   private IEnumerator SpawnCoroutine() {
     foreach (var wave in waves) {
-      yield return new WaitForSeconds(wave.initialWaitTime);
-      for (int i = 0; i < wave.amountToSpawn; i++) {
-        Spawn(wave.enemies[Random.Range(0, wave.enemies.Count)]);
-        yield return new WaitForSeconds(Random.Range(wave.minCadenceTime, wave.maxCadenceTime));
+      foreach (var item in wave.items) {
+        yield return new WaitForSeconds(item.initialWaitTime);
+        for (int i = 0; i < item.amountToSpawn; i++) {
+          Spawn(item);
+          yield return new WaitForSeconds(Random.Range(item.minCadenceTime, item.maxCadenceTime));
+        }
       }
     }
     Debug.Log("Finish Wave!");
   }
 
-  private void Spawn(Enemy enemy) {
-    GameObject go = PoolController.Instance.GetOne(enemy.prefab.name);
+  private void Spawn(Item item) {
+    GameObject go = PoolController.Instance.GetOne(item.prefab.name);
     go.SetActive(true);
   }
 }
