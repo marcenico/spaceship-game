@@ -12,11 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e7eb1f5719102b40ae1cb174e64bf78, type: 3}
   m_Name: Wave-2
   m_EditorClassIdentifier: 
-  enemies:
-  - prefab: {fileID: 2197924633482761215, guid: a003df76c4f3e704cb46740d0a3319cb,
+  items:
+  - prefab: {fileID: 3140187658767066757, guid: 2dcaf036a1ea38c4d84ad5b4c68bc31d,
       type: 3}
-    path: {fileID: 2504027823870588173, guid: 3dfe36a5b8ee1b64394884fd7456fe81, type: 3}
-  initialWaitTime: 10
-  minCadenceTime: 2
-  maxCadenceTime: 2
-  amountToSpawn: 5
+    initialWaitTime: 5
+    minCadenceTime: 0.2
+    maxCadenceTime: 0.2
+    amountToSpawn: 10

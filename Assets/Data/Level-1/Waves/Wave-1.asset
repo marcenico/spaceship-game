@@ -24,4 +24,4 @@ MonoBehaviour:
     initialWaitTime: 5
     minCadenceTime: 1.5
     maxCadenceTime: 2
-    amountToSpawn: 15
+    amountToSpawn: 5

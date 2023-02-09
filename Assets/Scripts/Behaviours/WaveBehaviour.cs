@@ -21,6 +21,9 @@ public class WaveBehaviour : MonoBehaviour {
     foreach (var wave in waves) {
       foreach (var item in wave.items) {
         yield return new WaitForSeconds(item.initialWaitTime);
+
+        GameManager.Instance.AddWaveNumber();
+
         for (int i = 0; i < item.amountToSpawn; i++) {
           Spawn(item);
           yield return new WaitForSeconds(Random.Range(item.minCadenceTime, item.maxCadenceTime));

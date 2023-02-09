@@ -3,9 +3,11 @@ using TMPro;
 
 public class UIStatsController : MonoBehaviour {
   [HideInInspector] public StatsController statsController = null;
-  [SerializeField] private TextMeshProUGUI lifeText = null;
-  [SerializeField] private TextMeshProUGUI shieldText = null;
-  [SerializeField] private TextMeshProUGUI experienceText = null;
+  [SerializeField] private TextMeshProUGUI lifeValue = null;
+  [SerializeField] private TextMeshProUGUI shieldValue = null;
+  [SerializeField] private TextMeshProUGUI experienceValue = null;
+
+  [SerializeField] private TextMeshProUGUI waveValue = null;
 
   void Awake() {
     GameObject player = GameObject.FindGameObjectWithTag("Player");
@@ -20,17 +22,22 @@ public class UIStatsController : MonoBehaviour {
     StatsTextProvider.OnHasLifeChange += OnHasLifeChange;
     StatsTextProvider.OnHasShieldChange += OnHasShieldChange;
     StatsTextProvider.OnHasExperienceChange += OnHasExperienceChange;
+    StatsTextProvider.OnHasWaveChange += OnHasWaveChange;
   }
 
   private void OnHasLifeChange(string life) {
-    lifeText.text = life;
+    lifeValue.text = life;
   }
 
   public void OnHasShieldChange(string shield) {
-    shieldText.text = shield;
+    shieldValue.text = shield;
   }
 
   public void OnHasExperienceChange(string experience) {
-    experienceText.text = experience;
+    experienceValue.text = experience;
+  }
+
+  public void OnHasWaveChange(string waveNumber) {
+    waveValue.text = waveNumber;
   }
 }

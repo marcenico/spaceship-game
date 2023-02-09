@@ -8,6 +8,9 @@ public static class StatsTextProvider {
   public delegate void HasExperienceChange(string experience);
   public static event HasExperienceChange OnHasExperienceChange;
 
+  public delegate void HasWaveChange(string waveNumber);
+  public static event HasWaveChange OnHasWaveChange;
+
   public static void TriggerOnHasLifeChange(string life) {
     OnHasLifeChange?.Invoke(life);
   }
@@ -18,6 +21,10 @@ public static class StatsTextProvider {
 
   public static void TriggerOnHasExperienceChange(string experience) {
     OnHasExperienceChange?.Invoke(experience);
+  }
+
+  public static void TriggerOnHasWaveChange(string waveNumber) {
+    OnHasWaveChange?.Invoke(waveNumber);
   }
 }
 

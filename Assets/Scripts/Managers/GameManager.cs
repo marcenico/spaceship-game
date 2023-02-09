@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour {
   [SerializeField] private Character[] characters = null;
   private float experience = 0f;
   private int playerLevel = 1;
+  [HideInInspector] public int waveNumber = 0;
 
   private void Awake() {
     instance = this;
@@ -42,6 +43,11 @@ public class GameManager : MonoBehaviour {
         return;
       }
     }
+  }
+
+  public void AddWaveNumber() {
+    waveNumber++;
+    StatsTextProvider.TriggerOnHasWaveChange(waveNumber.ToString());
   }
 
 }
