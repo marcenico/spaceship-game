@@ -41,6 +41,7 @@ public class PoolController : MonoBehaviour {
   }
 
   public void ReturnOneToPool(GameObject go) {
+    go.transform.position = positionToSpawn;
     Pool pool = pools.Find(x => x.prefab.name == go.name);
     pool.gameObjects.Add(go);
   }
