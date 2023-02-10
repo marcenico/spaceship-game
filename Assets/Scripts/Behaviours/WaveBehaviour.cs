@@ -4,6 +4,7 @@ using System.Collections.Generic;
 
 public class WaveBehaviour : MonoBehaviour {
   [SerializeField] private List<Wave> waves = new List<Wave>();
+  private int startNextWave;
 
   private void Start() {
     StartCoroutine(SpawnCoroutine());
@@ -19,10 +20,11 @@ public class WaveBehaviour : MonoBehaviour {
 
   private IEnumerator SpawnCoroutine() {
     foreach (var wave in waves) {
+      GameManager.Instance.AddWaveNumber();
+      GameManager.Instance.StartNextWaveCounter(wave.items[0].initialWaitTime);
       foreach (var item in wave.items) {
-        yield return new WaitForSeconds(item.initialWaitTime);
 
-        GameManager.Instance.AddWaveNumber();
+        yield return new WaitForSeconds(item.initialWaitTime);
 
         for (int i = 0; i < item.amountToSpawn; i++) {
           Spawn(item);
@@ -30,7 +32,6 @@ public class WaveBehaviour : MonoBehaviour {
         }
       }
     }
-    Debug.Log("Finish Wave!");
   }
 
   private void Spawn(Item item) {

@@ -50,4 +50,8 @@ public class GameManager : MonoBehaviour {
     StatsTextProvider.TriggerOnHasWaveChange(waveNumber.ToString());
   }
 
+  public void StartNextWaveCounter(float startCounterTime) {
+    StatsTextProvider.TriggerOnHasStartCounterChange(startCounterTime);
+  }
+
 }

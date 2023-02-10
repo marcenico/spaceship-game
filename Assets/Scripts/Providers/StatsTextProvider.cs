@@ -11,6 +11,9 @@ public static class StatsTextProvider {
   public delegate void HasWaveChange(string waveNumber);
   public static event HasWaveChange OnHasWaveChange;
 
+  public delegate void HasStartCounterChange(float startCounterTime);
+  public static event HasStartCounterChange OnHasStartCounterChange;
+
   public static void TriggerOnHasLifeChange(string life) {
     OnHasLifeChange?.Invoke(life);
   }
@@ -25,6 +28,10 @@ public static class StatsTextProvider {
 
   public static void TriggerOnHasWaveChange(string waveNumber) {
     OnHasWaveChange?.Invoke(waveNumber);
+  }
+
+  public static void TriggerOnHasStartCounterChange(float startCounterTime) {
+    OnHasStartCounterChange?.Invoke(startCounterTime);
   }
 }
 
