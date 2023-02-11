@@ -80,6 +80,7 @@ public class UIStatsController : MonoBehaviour {
       if (counter == 0) {
         nextWaveTimeText.SetActive(false);
         nextWaveTimeValue.gameObject.SetActive(false);
+        GameManager.Instance.AddWaveNumber();
       }
     }
 

@@ -20,7 +20,6 @@ public class WaveBehaviour : MonoBehaviour {
 
   private IEnumerator SpawnCoroutine() {
     foreach (var wave in waves) {
-      GameManager.Instance.AddWaveNumber();
       GameManager.Instance.StartNextWaveCounter(wave.items[0].initialWaitTime);
       foreach (var item in wave.items) {
 
