@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 5639899224785868617}
   - component: {fileID: 1529697462}
   - component: {fileID: 1529697468}
+  - component: {fileID: 336658031124240084}
   m_Layer: 13
   m_Name: LevelUpItem
   m_TagString: Untagged
@@ -125,6 +126,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   statsTarget: {fileID: 0}
+  otherCollider: {fileID: 0}
 --- !u!114 &1529697468
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -138,6 +140,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   onlyDeactivate: 0
+--- !u!114 &336658031124240084
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5639899224785868621}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fa25c657ea219c478d0ae1e5d0e4e0c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onlyDeactivate: 1
+  waitingTime: 0
+  render: {fileID: 867785603029012960}
 --- !u!1 &6872162908272464045
 GameObject:
   m_ObjectHideFlags: 0
@@ -148,7 +165,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2068958908223825203}
   - component: {fileID: 867785603029012960}
-  - component: {fileID: 8704814140666890493}
   m_Layer: 13
   m_Name: Skin
   m_TagString: Untagged
@@ -220,17 +236,3 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &8704814140666890493
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6872162908272464045}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2fa25c657ea219c478d0ae1e5d0e4e0c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  onlyDeactivate: 0
-  waitingTime: 0.5

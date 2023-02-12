@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8902576961489906391}
   - component: {fileID: 6211750091896502607}
-  - component: {fileID: 1097570176315692176}
+  - component: {fileID: 5094040870283364793}
   m_Layer: 10
   m_Name: Skin
   m_TagString: Untagged
@@ -82,7 +82,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1097570176315692176
+--- !u!114 &5094040870283364793
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -96,6 +96,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onlyDeactivate: 1
   waitingTime: 0
+  render: {fileID: 6211750091896502607}
 --- !u!1 &2693438464959009909
 GameObject:
   m_ObjectHideFlags: 0

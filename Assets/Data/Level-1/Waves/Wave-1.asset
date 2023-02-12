@@ -18,10 +18,4 @@ MonoBehaviour:
     initialWaitTime: 3
     minCadenceTime: 0.5
     maxCadenceTime: 0.5
-    amountToSpawn: 20
-  - prefab: {fileID: 4554290649193326102, guid: a003df76c4f3e704cb46740d0a3319cb,
-      type: 3}
-    initialWaitTime: 5
-    minCadenceTime: 1.5
-    maxCadenceTime: 2
-    amountToSpawn: 5
+    amountToSpawn: 25

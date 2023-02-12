@@ -239,6 +239,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onlyDeactivate: 1
   waitingTime: 0.5
+  render: {fileID: 2213275744904302933}
 --- !u!82 &7559137653217649212
 AudioSource:
   m_ObjectHideFlags: 0

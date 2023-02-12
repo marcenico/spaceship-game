@@ -79,6 +79,7 @@
      <Compile Include="Assets\Scripts\ScriptableObjects\Wave.cs" />
      <Compile Include="Assets\Scripts\Utils\AutoDestroyObject.cs" />
      <Compile Include="Assets\Scripts\Utils\AutoScroller.cs" />
+     <Compile Include="Assets\Scripts\Utils\ConsoleToGUI.cs" />
      <Compile Include="Assets\Scripts\Utils\DestroyInvisible.cs" />
      <Compile Include="Assets\Scripts\Utils\DestroyObject.cs" />
      <Compile Include="Assets\Scripts\Utils\Instanciator.cs" />

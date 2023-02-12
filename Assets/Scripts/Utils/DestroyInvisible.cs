@@ -4,14 +4,11 @@ using System.Collections;
 public class DestroyInvisible : MonoBehaviour {
   [SerializeField] private bool onlyDeactivate = true;
   [SerializeField] private float waitingTime = 0f;
-  private bool isVisible;
+  [SerializeField] private Renderer render = null;
 
-  private void Awake() {
-    isVisible = GetComponent<Renderer>().isVisible;
-  }
 
   public void OnBecameInvisible() {
-    if (!transform.root.gameObject.activeSelf || isVisible) return;
+    if (!transform.root.gameObject.activeSelf || render.isVisible) return;
 
     if (onlyDeactivate) {
       StartCoroutine(BecameInivisible());
@@ -24,6 +21,10 @@ public class DestroyInvisible : MonoBehaviour {
   private IEnumerator BecameInivisible() {
     yield return new WaitForSeconds(waitingTime);
     transform.root.gameObject.SetActive(false);
+  }
+
+  private void OnDisable() {
+    StopAllCoroutines();
   }
 
   private void OnDestroy() {
