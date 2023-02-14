@@ -46,11 +46,16 @@ public class PoolController : MonoBehaviour {
     pool.gameObjects.Add(go);
   }
 
-  public GameObject GetOne(string prefabName) {
-    GameObject go = null;
-    Pool pool = pools.Find(x => x.prefab.name == prefabName);
+  public GameObject GetOne(GameObject prefab) {
+    Pool pool = pools.Find(x => x.prefab.name == prefab.name);
+
+
+    if (pool is null) {
+      pool = AddPool(prefab);
+    }
 
     List<GameObject> onlyInactives = pool.gameObjects.FindAll(x => x.activeSelf == false);
+    GameObject go = null;
 
     if (onlyInactives.Count > 0) {
       go = onlyInactives[onlyInactives.Count - 1];
@@ -62,5 +67,21 @@ public class PoolController : MonoBehaviour {
       onlyInactives.Add(go);
       return go;
     }
+  }
+
+  private Pool AddPool(GameObject prefab) {
+    Debug.Log(prefab);
+
+    Pool pool = new Pool();
+    pool.initialSizeValue = 10;
+    pool.prefab = prefab;
+
+    for (var i = 0; i < pool.initialSizeValue; i++) {
+      pool.gameObjects.Add(prefab);
+    }
+
+    pools.Add(pool);
+
+    return pool;
   }
 }

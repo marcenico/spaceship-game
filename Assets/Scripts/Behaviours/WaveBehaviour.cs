@@ -34,7 +34,7 @@ public class WaveBehaviour : MonoBehaviour {
   }
 
   private void Spawn(Item item) {
-    GameObject go = PoolController.Instance.GetOne(item.prefab.name);
+    GameObject go = PoolController.Instance.GetOne(item.prefab);
     go.SetActive(true);
   }
 }

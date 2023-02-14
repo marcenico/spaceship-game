@@ -37,7 +37,7 @@ public class ShootController : MonoBehaviour, IShootable {
       isFirstShoot = false;
     } else {
       foreach (var spawnPoint in normalShoot.spawnProjectilesPoints) {
-        GameObject go = PoolController.Instance.GetOne(normalShoot.prefab.name);
+        GameObject go = PoolController.Instance.GetOne(normalShoot.prefab);
         go.transform.position = spawnPoint.position;
         go.transform.rotation = transform.rotation;
         go.SetActive(true);
@@ -51,7 +51,7 @@ public class ShootController : MonoBehaviour, IShootable {
   public IEnumerator ShootSpecial() {
     if (!shootSpecial.canFire) yield break;
     foreach (var spawnPoint in shootSpecial.spawnProjectilesPoints) {
-      GameObject go = PoolController.Instance.GetOne(shootSpecial.prefab.name);
+      GameObject go = PoolController.Instance.GetOne(shootSpecial.prefab);
       go.transform.position = spawnPoint.position;
       go.transform.rotation = transform.rotation;
       go.SetActive(true);

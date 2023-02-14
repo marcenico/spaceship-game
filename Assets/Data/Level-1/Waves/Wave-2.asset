@@ -16,6 +16,6 @@ MonoBehaviour:
   - prefab: {fileID: 4554290649193326102, guid: a003df76c4f3e704cb46740d0a3319cb,
       type: 3}
     initialWaitTime: 5
-    minCadenceTime: 0.2
-    maxCadenceTime: 0.2
+    minCadenceTime: 0.5
+    maxCadenceTime: 0.5
     amountToSpawn: 10

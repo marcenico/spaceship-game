@@ -334,7 +334,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   possiblePaths:
-  - {fileID: 2004855166036672312, guid: 1747286ef0b127b43916557975a2cacd, type: 3}
+  - {fileID: 7741124592789977522, guid: de8f9823f0493dd4a98f231032dcb2d1, type: 3}
   endOfPathInstruction: 2
   rotationSpeed: 1
 --- !u!114 &2305584194081727528
