@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   life: 1
   shield: 0
-  speed: 10
+  speed: 12
   skin: {fileID: 21300000, guid: 77580bdf701eeb2438cbb61fef15ddd1, type: 3}
   shootPrefab: {fileID: 893696515293339645, guid: 8c3aa22455d33ca41850ee80eb6274c7,
     type: 3}

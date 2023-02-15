@@ -70,8 +70,6 @@ public class PoolController : MonoBehaviour {
   }
 
   private Pool AddPool(GameObject prefab) {
-    Debug.Log(prefab);
-
     Pool pool = new Pool();
     pool.initialSizeValue = 10;
     pool.prefab = prefab;

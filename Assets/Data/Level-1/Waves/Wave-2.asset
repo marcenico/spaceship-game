@@ -17,5 +17,5 @@ MonoBehaviour:
       type: 3}
     initialWaitTime: 5
     minCadenceTime: 0.5
-    maxCadenceTime: 0.5
+    maxCadenceTime: 1
     amountToSpawn: 10
