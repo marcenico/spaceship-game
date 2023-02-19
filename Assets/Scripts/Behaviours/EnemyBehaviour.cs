@@ -33,6 +33,7 @@ public class EnemyBehaviour : MonoBehaviour {
   }
 
   private void Update() {
+    if (GameManager.Instance.isPlayerDead) return;
     if (character.canFire && shootController && spriteRenderer.isVisible) StartCoroutine(shootController.Shoot());
   }
 

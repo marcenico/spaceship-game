@@ -20,7 +20,7 @@ MonoBehaviour:
     type: 3}
   shootSpecialPrefab: {fileID: 893696515293339645, guid: 8c3aa22455d33ca41850ee80eb6274c7,
     type: 3}
-  canFire: 0
+  canFire: 1
   waitFirstShoot: 1
   nextFire: 3
   nextFireSpecial: 10

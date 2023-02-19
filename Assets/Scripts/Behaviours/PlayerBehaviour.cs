@@ -27,7 +27,7 @@ public class PlayerBehaviour : MonoBehaviour, IMovable {
   }
 
   public void OnDefeat() {
-    Debug.LogWarning("Not implemented yet");
+    GameManager.Instance.isPlayerDead = true;
   }
 
   public void MakeDamage() {

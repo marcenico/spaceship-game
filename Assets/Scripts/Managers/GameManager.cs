@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour {
   [SerializeField] private Character[] characters = null;
   private float experience = 0f;
   private int playerLevel = 1;
+  [HideInInspector] public bool isPlayerDead = false;
   [HideInInspector] public int waveNumber = 0;
 
   private void Awake() {

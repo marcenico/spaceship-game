@@ -149,6 +149,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   config: {fileID: 11400000, guid: 776aba3e58cd79d46ba80e482179a758, type: 2}
+  rb: {fileID: 2228837567378644756}
+  followPlayer: 1
 --- !u!114 &4645657899840405307
 MonoBehaviour:
   m_ObjectHideFlags: 0
