@@ -38,7 +38,7 @@ public class PlayerBehaviour : MonoBehaviour, IMovable {
   private void SetConfig() {
     if (statsController) statsController.SetConfig(character);
     if (shootController) shootController.SetConfig(character);
-    spriteRenderer.sprite = character.skin;
+    if (spriteRenderer) spriteRenderer.sprite = character.skin;
   }
 
   private void OnHasMove(Vector3 direction) {

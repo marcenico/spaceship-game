@@ -220,6 +220,7 @@ MonoBehaviour:
   characters:
   - {fileID: 11400000, guid: 88e9414fb46748947a9c7f2e9243958f, type: 2}
   - {fileID: 11400000, guid: 4630ac896df161c4786a4a78740cb397, type: 2}
+  isPlayerDead: 0
   waveNumber: 0
 --- !u!4 &928965137
 Transform:

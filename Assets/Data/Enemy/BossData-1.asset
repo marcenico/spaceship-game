@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f588e21568c227b458d4beca96f5619f, type: 3}
+  m_Name: BossData-1
+  m_EditorClassIdentifier: 
+  life: 1000
+  shield: 100
+  speed: 5
+  skin: {fileID: 21300000, guid: 828825303989511489fb94c0717b8527, type: 3}
+  shootPrefab: {fileID: 1027706497682640329, guid: 0395d1ec7beb1244b9b10ec69b272be0,
+    type: 3}
+  shootSpecialPrefab: {fileID: 1027706497682640329, guid: 0395d1ec7beb1244b9b10ec69b272be0,
+    type: 3}
+  canFire: 1
+  waitFirstShoot: 1
+  nextFire: 2
+  nextFireSpecial: 10
+  experienceOnDead: 100
+  damageOnTrigger: 10
+  playerLevel:
+    levelNumber: 1
+    experienceToLevelUp: 0

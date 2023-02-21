@@ -8,7 +8,7 @@ public class FollowPathController : MonoBehaviour, IMovable {
   private PathCreator pathCreator = null;
   private float distanceTravelled;
   private Vector3 oldPosition = Vector3.zero;
-  private float speed = 1f;
+  [SerializeField] private float speed = 1f;
   [SerializeField] private float rotationSpeed = 1f;
 
   private void Awake() {
