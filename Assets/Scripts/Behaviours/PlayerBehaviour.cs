@@ -26,6 +26,14 @@ public class PlayerBehaviour : MonoBehaviour, IMovable {
     InputProvider.OnHasLevelUp += OnHasLevelUp;
   }
 
+  private void UnsuscribeEvents() {
+    InputProvider.OnHasMove -= OnHasMove;
+    InputProvider.OnHasShoot -= OnHasShoot;
+    InputProvider.OnHasShootSpecial -= OnHasShootSpecial;
+    InputProvider.OnHasDamage -= OnHasDamage;
+    InputProvider.OnHasLevelUp -= OnHasLevelUp;
+  }
+
   public void OnDefeat() {
     GameManager.Instance.isPlayerDead = true;
   }
@@ -78,13 +86,6 @@ public class PlayerBehaviour : MonoBehaviour, IMovable {
     UnsuscribeEvents();
   }
 
-  private void UnsuscribeEvents() {
-    InputProvider.OnHasMove -= OnHasMove;
-    InputProvider.OnHasShoot -= OnHasShoot;
-    InputProvider.OnHasShootSpecial += OnHasShootSpecial;
-    InputProvider.OnHasDamage += OnHasDamage;
-    InputProvider.OnHasLevelUp += OnHasLevelUp;
-  }
 
   public void DoMovement() {
     throw new System.NotImplementedException();
