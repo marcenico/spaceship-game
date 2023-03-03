@@ -59,6 +59,8 @@
      <Compile Include="Assets\Scripts\Behaviours\ProjectileBehaviour.cs" />
      <Compile Include="Assets\Scripts\Behaviours\WaveBehaviour.cs" />
      <Compile Include="Assets\Scripts\Controllers\FollowPathController.cs" />
+     <Compile Include="Assets\Scripts\Controllers\MenuController.cs" />
+     <Compile Include="Assets\Scripts\Controllers\PauseMenuController.cs" />
      <Compile Include="Assets\Scripts\Controllers\PoolController.cs" />
      <Compile Include="Assets\Scripts\Controllers\ShootController.cs" />
      <Compile Include="Assets\Scripts\Controllers\StatsController.cs" />
@@ -70,6 +72,7 @@
      <Compile Include="Assets\Scripts\Listeners\InputKeyboardListener.cs" />
      <Compile Include="Assets\Scripts\Listeners\WindowResizeListener.cs" />
      <Compile Include="Assets\Scripts\Managers\GameManager.cs" />
+     <Compile Include="Assets\Scripts\Managers\UIManager.cs" />
      <Compile Include="Assets\Scripts\Providers\BoundaryProvider.cs" />
      <Compile Include="Assets\Scripts\Providers\InputProvider.cs" />
      <Compile Include="Assets\Scripts\Providers\StatsTextProvider.cs" />
@@ -82,10 +85,12 @@
      <Compile Include="Assets\Scripts\Utils\ConsoleToGUI.cs" />
      <Compile Include="Assets\Scripts\Utils\DestroyInvisible.cs" />
      <Compile Include="Assets\Scripts\Utils\DestroyObject.cs" />
+     <Compile Include="Assets\Scripts\Utils\Events.cs" />
      <Compile Include="Assets\Scripts\Utils\Instanciator.cs" />
      <Compile Include="Assets\Scripts\Utils\OnDefeatDo.cs" />
      <Compile Include="Assets\Scripts\Utils\OnTriggerDo.cs" />
      <Compile Include="Assets\Scripts\Utils\ScenarioWalls.cs" />
+     <Compile Include="Assets\Scripts\Utils\Singleton.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\Resources\JMO Assets\Cartoon FX\Shaders\CFX3 Multiply Color.shader" />
