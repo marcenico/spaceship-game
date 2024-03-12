@@ -1,5 +1,3 @@
-# space-game-1
+# Spaceship prototype
 
-## Version de Unity
-
-2019.4.8f1
+This is a prototype of a spaceship game 🚀👾. Developed using Unity engine.
